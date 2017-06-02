@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>popup</title>
+	<style type="text/css">
+	/*====================================popup====================*/
+	 *{ margin:0;padding:0;}
+	.tjhp_popup { position:absolute; top:0;right:0;  width:598px;border:1px solid #dbdbdb;background-color:#f4f4f4;z-index:99999;}
+	.tjhp_popup  h3 { height:39px;text-align:right;background-color:#9e000f; }
+	.tjhp_popup  h3 .close { display:inline-block;width:39px;height:39px;background:url(images/close.jpg) 0 0 no-repeat;cursor:pointer;}
+	.tjhp_popup_con {  position:relative;padding:0 30px;}
+	.tjhp_popup_con  h4 {  height:60px;color:#333;font:18px/60px 'Microsoft YaHei';text-align:center;}
+	.tjhp_popup_con p { font-size:14px;line-height:24px;color:#333;}
+	.tjhp_popup_con p.p_date,.tjhp_popup_con p.p_sec  { text-align:right;}
+	.tjhp_popup_con p.check_box { padding:10px 0px;zoom:1;}
+	.tjhp_popup_con p.check_box:after { content:"";display:block;clear:both;} 
+	.tjhp_popup_con p.check_box  span { float:left;height:33px;}
+	.tjhp_popup_con p.check_box  span.sp_object { margin-left:10px;width:100px;height:33px;border:1px solid #dbdbdb;}
+	.tjhp_popup_con p.p_btn  { padding:20px 0 30px;text-align:center;}
+	.tjhp_popup_con p.p_btn input { margin-right:10px;width:110px;height:40px;background:url(images/btn.jpg) 0 0 no-repeat;cursor:pointer;border:none;border:0;font-size:16px;font-family:"Microsoft YaHei";}
+	.tjhp_popup_con p.p_btn input.left { background-position:0 0;color:#fff;}
+	.tjhp_popup_con p.p_btn input.right { margin-left:20px;background-position:-150px 0;}
+	</style>
+</head>
+<body>
+<div class="tjhp_popup"  id="tjhp_popup">
+	<h3><a class="close"></a></h3>
+	<div class="tjhp_popup_con">
+		<h4>上传材料</h4>
+		<p>材料名称：起诉书</p>
+		<p>文件类型： 图片、文本、word文档支持格式包括：txt、doc、docx、jpg、gif、png、bmp，文件大小不能超过10MB </p>
+		<p class="check_box"><span>选择文件:</span><span class="sp_object"></span></p>
+		<p class="p_btn"><input type="button" value="上&nbsp;&nbsp;传" class="left" /><input type="button" value="取&nbsp;&nbsp;消"  class="right"/></p>
+		<div class="sub_btn"></div>
+	</div>
+</div>	
+<script type="text/javascript" src="js/jquery1.7.1.min.js"></script>
+<script type="text/javascript" src="js/tjhp_popup.js"></script>	
+</body>
+</html>

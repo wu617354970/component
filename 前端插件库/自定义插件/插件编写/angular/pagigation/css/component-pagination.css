@@ -1,0 +1,163 @@
+/**
+ * @name          component
+ * @description   component fd-pagination  style
+ * @author        wuwg
+ * @createTime    2016-06-24
+ * @UpdateTime    2016-06-28
+  * @rule         fd-pagination {'fd-'+'组件名'}
+ */
+
+.fd-pagination .disabled{
+  cursor: default;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.fd-pagination {
+    height: 30px;
+    overflow: hidden;
+    color: #666;
+    font: 14px/30px "Microsoft YaHei ";
+}
+.fd-pagination .fd-info,
+.fd-pagination .fd-operate span{
+    float: left;
+}
+.fd-pagination .fd-info{
+
+}
+.fd-pagination .fd-operate {
+    float: right;
+}
+.fd-pagination .fd-operate li {
+    float: left;
+}
+/*数字*/
+.fd-pagination .fd-prev,
+.fd-pagination .fd-page-count,
+.fd-pagination .fd-next{
+    margin: 0 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+    font-family: "Microsoft YaHei";
+    border: 1px solid transparent;
+    box-sizing: border-box;
+}
+
+.fd-pagination .fd-page-count:hover {
+    text-decoration: underline;
+}
+.fd-pagination .fd-page-count:hover,
+.fd-pagination .fd-page-count.active{
+    color: #3899ed;
+}
+
+.fd-pagination .fd-page-count.point ,
+.fd-pagination .fd-page-count.point:hover {
+    color: #666;
+    text-decoration: none;
+}
+/***上一页，下一页***/
+.fd-pagination .fd-prev,
+.fd-pagination .fd-next{
+    position: relative;
+    font: 0/0 SimSun;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999em;
+    cursor: pointer;
+}
+/***上一页小三角，下一页小三角***/
+.fd-pagination .fd-prev:after,
+.fd-pagination .fd-next:after {
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    margin-top: -5px;
+    border: 5px solid transparent;
+}
+/***上一页小三角***/
+.fd-pagination .fd-prev:after {
+    margin-left: -5px;
+    border-right-width:10px ;
+    border-right-color: #666;
+    border-left-width:0px ;
+}
+/***下一页小三角***/
+.fd-pagination .fd-next:after {
+    margin-left: -5px;
+    border-right: 0;
+    border-left-width:10px ;
+    border-left-color: #666;
+}
+/***hover***/
+.fd-pagination .fd-prev:hover:after{
+    border-right-color: #333;
+}
+.fd-pagination .fd-next:hover:after{
+    border-left-color: #333;
+}
+
+/***首页，尾页***/
+.fd-pagination .fd-first,
+.fd-pagination .fd-last {
+    position: relative;
+    font: 0/0 SimSun;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999em;
+    cursor: pointer;
+}
+
+/***首页小三角，尾页小三角***/
+.fd-pagination .fd-first:after,
+.fd-pagination .fd-last:after,
+.fd-pagination .fd-first:before,
+.fd-pagination .fd-last:before {
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    margin-top: -5px;
+    border: 5px solid transparent;
+}
+
+/***首页小三角***/
+.fd-pagination .fd-first:after,
+.fd-pagination .fd-first:before {
+    margin-left: -5px;
+    border-right-width:10px ;
+    border-right-color: #666;
+    border-left-width:0px ;
+}
+.fd-pagination .fd-first:before {
+      margin-left: 0px;
+}
+/***尾页小三角***/
+.fd-pagination .fd-last:after ,
+.fd-pagination .fd-last:before {
+    margin-left: -5px;
+    border-right: 0;
+    border-left-width:10px ;
+    border-left-color: #666;
+}
+.fd-pagination .fd-last:before{
+	 margin-left: 0px;
+}
+/***hover***/
+.fd-pagination .fd-first:hover:after,
+.fd-pagination .fd-first:hover:before{
+    border-right-color: #333;
+}
+.fd-pagination .fd-last:hover:after,
+.fd-pagination .fd-last:hover:beore{
+    border-left-color: #333;
+}

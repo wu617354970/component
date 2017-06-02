@@ -1,0 +1,51 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>add Focus</title>
+	<style type="text/css">
+	.d_01 {
+			margin:0 auto;
+			width:1000px;
+			padding:20px 0;
+		}
+	.inp_text_01 ,.inp_text_02,.inp_text_03{
+			padding:3px 10px;
+			width:200px;
+			height:28px;
+			border:1px solid #000;
+		}	
+	.inp_text_02_focus {
+			border-color:red;
+		}	
+	</style>
+</head>
+<body>
+	<div class="d_01">
+		<input type="text" name="" id="inp_text_01"   class="inp_text_01" value="" />
+	</div>
+	<div class="d_01">
+		<input type="text" name="" id="inp_text_02"   class="inp_text_02" value=""  />
+	</div>
+	<script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="scripts/addfocus.js"></script>
+	<script type="text/javascript">
+		$(".inp_text_01").addFocus(
+			{
+				textContent : "输入文书关键词查找",
+				defaultColor : "#bababa",
+				textColor : "#333",
+				whetherAddClass : false,
+				newClass : ""
+			});
+		$(".inp_text_02").addFocus(
+			{
+				textContent : "输入文书关键词查找",
+				defaultColor : "#bababa",
+				textColor : "#333",
+				whetherAddClass : true,
+				newClass : "inp_text_02_focus"
+			});	
+	</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+</head>
+<body>
+<div class="fd-contain">
+    <div class="fd-operate" id="jsOperateList">
+        <div class="fd-item default">
+            <label class="fd-label">抵押人：</label>
+            <input type="text" name=""  class="js-name"  />
+            <label class="fd-label" ><em>*</em>抵押种类：</label>
+            <select name=""   class="js-select">
+                <option value="1">种类1</option>
+                <option value="2"  >种类2</option>
+                <option value="3" selected="selected">种类3</option>
+                <option value="4" >种类4</option>
+            </select>
+            <label class="fd-label">抵押金额：</label>
+            <input type="text" name=""  class="js-money"/>
+            <span class="fd-unit">(万元)</span>
+             <span class="fd-operate-btn add  js-fd-add">添加</span>
+             <span class="fd-operate-btn   delete ">删除</span>
+        </div>
+        <!--原始添加项-->
+        <div   id="jsOperateListContent">
+
+
+        </div>
+        <!--数据项默认为空-->
+    </div>
+    <!--fd-operate-->
+</div>
+<!--fd-contain end-->
+
+<script src="js/jQuery.v1.11.1.js"></script>
+<script src="js/test.js"></script>
+</body>
+</html>

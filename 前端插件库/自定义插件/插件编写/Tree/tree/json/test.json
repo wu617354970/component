@@ -1,0 +1,26 @@
+{
+  "message" : "成功",
+  "result" : {
+	"fbdm" : "0000",
+	"fydm" : "0",
+	"fyjb" : "1",
+	"fyjc" : "全国",
+	"isXq" : "true",
+	"mapId" : "000000",
+	"disabled":false,
+	"xqmc" : "全国人民法院"
+    "children" : [
+      {
+        "children" : [],
+        "fbdm" : "000Z",
+        "fydm" : "0",
+        "fyjb" : "1",
+        "fyjc" : "最高",
+        "isXq" : "false",
+        "mapId" : "990000",
+        "xqmc" : "最高人民法院"
+     }
+	}
+  "success" : "true"
+  }
+	 

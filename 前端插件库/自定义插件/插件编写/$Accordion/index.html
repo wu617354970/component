@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Accrodion</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/common.css" media="all" />
+</head>
+<body>
+<div class="contain">
+		<h2 class="h2_18_m" >addAccordion()方法</h2>
+		<p class="p_info">时间:2014-07-14，作者:wuwg</p>
+		<div class="main">
+			<table class="table_contain" >
+				<tr>
+					<td>
+					<h3 class="h3_16_m">手风琴效果</h3>
+						<div id="accordion" class="accordion">
+							<ul  class="accordion_ul">
+							  <li>
+									<h3>血战到底</h3>
+									<div class="d_img"><img src="images/img1.jpg" /></div>
+							  </li>
+							  <li>
+									<h3>天马行空</h3>
+									<div  class="d_img"><img src="images/img2.jpg" /></div>
+							  </li>
+							  <li>
+									<h3>银色战甲</h3>
+									<div  class="d_img"><img src="images/img3.jpg" /></div>
+							  </li>
+							   <li>
+									<h3>风中之王</h3>
+									<div  class="d_img"><img src="images/img4.jpg" /></div>
+							  </li>
+							  <li>
+									<h3 class="last">雷霆战车</h3>
+									<div  class="d_img"><img src="images/img5.jpg" /></div>
+							  </li>
+						  </ul>
+					  </div>
+					  </td>
+				  </tr>
+			</table>
+		</div>
+ </div> 
+<script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="scripts/accordion.min.js"></script>
+ <script type="text/javascript">
+  		
+	/*******************************************************************************************************************************************************
+	 *	方法名：						addAccordion()		
+	 *	使用范例 ： 				   $("#accordion").addAccordion({});		
+	 *	index							索引(0)
+	 *	selectedClass					选中的节点样式(默认 on)
+	 *	mouseType						鼠标事件类型	(默认点击 click)
+	 *	autoPlay						是否自动播放(默认false)
+	 *	tweenTime						缓动时间(默认300毫秒)
+	 *	ease							缓动函数(默认 swing)
+	 *	delay							自动播放等待切换时间(默认6000 --- 6秒)
+	*********************************************************************************************************************************************************/
+			$("#accordion").addAccordion({
+				index : 0,
+				selectedClass : "on",
+				mouseType : "click",
+				autoPlay : true,
+				timeween : 300,
+				delay : 6000,
+				ease : "swing",
+				callBack : function(index){
+						
+					}
+			});
+	
+  </script>
+</body>
+</html>

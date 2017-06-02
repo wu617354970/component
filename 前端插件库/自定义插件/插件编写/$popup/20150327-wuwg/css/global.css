@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+/************************************
+ *	Version 		14.00.01
+ *	Author			wuwg
+ *  CreateTime      15.03.25
+ *	UpdateTime		15.03.25
+ ************************************/
+
+/***************************************************************************************************	
+
+							     	type:	table
+									
+***************************************************************************************************/		
+.fd_table_upload_file {width:100%;}
+.fd_table_upload_file .fd_cell {padding:0 10px; font:12px/28px  "Microsoft YaHei";color:#4c4c4c;}
+.fd_table_upload_file .fd_eye { padding-left:24px;background: url(../images/icon_eye.png) 0 center no-repeat; }
+.fd_table_upload_file .fd_wait  { display:inline-block;padding-left:24px;background: url(../images/icon_wait.png) 0 center no-repeat; }
+.fd_table_upload_file .fd_btn_close { display:block;width:30px;height:30px;font:0/0 SimSun;background: url(../images/icon_close_24.png) center center no-repeat; }
+.fd_table_upload_file .fd_btn_close:hover { text-decoration:none;}
+.fd_table_upload_file  td { vertical-align:middle;background-color:#fff;}
+.fd_table_upload_file .tr_strip td { background-color:#dce4ed;}
+
+/***************************************************************************************************	
+
+							     	type:	select
+									
+***************************************************************************************************/	
+
+/*sub select */
+.search_menu_sub{ float:left;position:relative;min-width:150px;height:26px;font:14px/26px "Microsoft YaHei";color:#4c4c4c;border:1px solid #bebebe;background-color:#fff;}
+.search_value_box_sub{position:relative;z-index:1;width:100%;height:100%;overflow:hidden;}
+.search_value_box_sub span{display:block;height:26px;}
+.search_value_box_sub .sp_gain_value{margin:0 26px 0 3px;font:14px/26px "Microsoft YaHei";;color:#555;overflow:hidden;white-space:nowrap;}
+.search_value_box_sub .sp_mousedown{ position:absolute;top:0;right:0;z-index:2;width:26px;background:url(../images/icon_trigger.png) center center no-repeat;cursor:pointer;font:0/0 SimSun;}
+.search_con_nav_sub{display:none;position:absolute;top:27px;left:-1px;width:100%;border:1px solid #c6c6c6;border-right:none;border-top:none;background-color:#FFF;z-index:9999;}
+.search_con_nav_sub dt,.search_con_nav_sub dd{padding:3px 15px;height:20px;font:14px/20px "Microsoft YaHei";;color:#555;border-right:1px solid #c6c6c6;}
+.search_con_nav_sub dt{font-weight:700;}
+.search_con_nav_sub dd{cursor:pointer;}
+.search_con_nav_sub dd.dd_hover{background-color:#c7c7c7;color:#fff;}
+/***************************************************************************************************	
+
+							     	type:	button
+									
+***************************************************************************************************/	
+.fd_btn_medium{padding:0 15px;height:30px;text-align:center;font:14px "Microsoft YaHei";border-radius:3px;color:#3c546d;letter-spacing:2px;cursor:pointer;border:1px solid #bfbfbf;}
+.fd_btn_medium_blue{color:#fff;border-color:#27a4e7;background-color:#27a4e7;}
+.fd_btn_medium_blue:hover{background-color:#2cb5fe;}
+.fd_btn_medium_gray{background:url(../images/btn_gray_28.png) 0 0 repeat-x;}
+.fd_btn_medium_gray:hover{background:#fff;}
+/***************************************************************************************************	
+
+							     	type:	popup
+									
+***************************************************************************************************/
+.fd_popup_layer{  border-radius:4px;box-shadow:2px 2px 4px #606266;width:460px;}
+/****************** popup header *************/
+.fd_dl_popup .popup_hd{height:40px;color:#fff;font:16px/40px "Microsoft YaHei";border-radius:4px 4px 0 0;background-color:#1b84bd;}
+.fd_dl_popup .sp_title{float:left;padding-left:14px;}
+.fd_dl_popup .popup_close{float:right;width:40px;height:40px;font:0/0 SimSun;border-radius:0 4px 0 0;background:url(../images/window_close.png) center center no-repeat;}
+.fd_dl_popup .popup_close:hover{text-decoration:none;background-color:#32aaeb;}
+/****************** popup content *************/
+.fd_dl_popup .popup_con{border-radius:0 0 4px 4px;background-color:#eeedef;}
+.fd_dl_popup .popup_con_have_footer{position:relative;padding-bottom:70px;}
+/****************** popup footer *************/
+.fd_dl_popup .fd_button_wrap{position:absolute;bottom:0;left:0;z-index:1;padding-bottom:24px;width:100%;text-align:center;}
+.fd_dl_popup .fd_button_wrap input{margin:0 5px;width:92px;}
+/****************** popup theme  *************/
+.fd_theme_contain{padding:10px 40px;}
+/*meeting upload */.fd_upload_contain{padding:;}
+/************  fd_ul_form *********/
+.fd_ul_form {}
+.fd_ul_form li { font:14px/28px "Microsoft YaHei";color:#4c4c4c;zoom:1;}	
+.fd_ul_form .item_have_input {padding:6px 0;}
+.fd_ul_form li:after { content:"";display:block;clear:both;}
+.fd_ul_form  label  ,.fd_ul_form input,.fd_ul_form  .fd_input_wrap{float:left;}
+.fd_ul_form  label {margin-right:5px;}
+.fd_ul_form .fd_input_wrap {  position:relative;width:105px;height:26px;border:1px solid #bebebe;background-color:#fff;}
+.fd_ul_form .fd_input_wrap .btn_date{  position:absolute;top:0;right:0; width:26px;height:26px;background: url(../images/icon_date.png) center center no-repeat;font:0/0 SimSun;}
+.fd_ul_form .fd_input_wrap input { width:75px;margin-left:4px;height:26px;font:14px/26px "Microsoft YaHei";color:#4c4c4c;background:none;border:none;}
+/*------------------------   1    ------------------------ */
+/*----------------  2    ---------------- */
+/*------------   3 ------------*/
+/*--------   4 -------- */
+/*----  5 ----*/
+/*6 */

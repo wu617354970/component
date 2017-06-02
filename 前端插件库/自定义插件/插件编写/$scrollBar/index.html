@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>AddScrollBar</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/common.css" media="all" />
+</head>
+<body>
+<div class="contain">
+		<h2 class="h2_18_m" >addScrollBar()方法</h2>
+		<p class="p_info">时间:2014-08-19，作者:wuwg</p>
+		<div class="main">
+			<table class="table_contain" >
+				<tr>
+					<td  colspan="2">
+						<h3 class="h3_16_m">水平滚动条</h3>
+						<div id="scrollContentHorizontal" style="">   
+							<ul class="ul_horizontal">
+								<li>1</li>
+								<li>2</li>
+								<li>3</li>
+								<li>4</li>
+								<li>5</li>
+								<li>6</li>
+								<li>7</li>
+								<li>8</li>
+								<li>9</li>
+								<li>10</li>
+							</ul>
+						</div>	
+						<!-- scrollContentHorizontal end -->
+					</td>
+				  </tr>
+				  <tr>
+						<td colspan=2;><h3 class="h3_16_m">垂直滚动条</h3></td>
+				  </tr>
+				  <tr>
+					<td >
+						 <div id="scrollContent" style=""  class="scrollContent">   
+							<div class="scrollContent_con">
+								<p>内容1</p>
+								<p>内容2</p>
+								<p>内容3</p>
+								<p>内容4</p>
+								<p>内容5</p>
+								<p>内容6</p>
+								<p>内容7</p>
+								<p>内容8</p>
+								<p>内容9</p>
+								<p>内容10</p>
+								<p>内容11</p>
+								<p>内容12</p>
+								<p>内容13</p>
+								<p>内容14</p>
+								<p>内容15</p>
+							</div>
+							<!-- scrollContent_con end -->
+						</div> 
+						<!-- scrollContent end -->
+					</td>
+					<td>
+						<div id="scrollContent2" style="">   
+							<div class="scrollContent_con">
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+							</div>
+							<!-- scrollContent_con end -->
+						</div>  
+						<!-- scrollContent2 end		 -->
+					</td>
+				  </tr>
+				   <tr>
+					<td >
+						 <div id="scrollContent3" style=""  class="scrollContent">   
+							<div class="scrollContent_con">
+								<p>内容1</p>
+								<p>内容2</p>
+								<p>内容3</p>
+								<p>内容4</p>
+								<p>内容5</p>
+								<p>内容6</p>
+								<p>内容7</p>
+								<p>内容8</p>
+								<p>内容9</p>
+								<p>内容10</p>
+								<p>内容11</p>
+								<p>内容12</p>
+								<p>内容13</p>
+								<p>内容14</p>
+								<p>内容15</p>
+							</div>
+							<!-- scrollContent_con end -->
+						</div> 
+						<!-- scrollContent end -->
+					</td>
+					<td>
+						<div id="scrollContent4" style=""  class="scrollContent">   
+							<div class="scrollContent_con">
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+								<p>内容</p>
+							</div>
+							<!-- scrollContent_con end -->
+						</div>  
+						<!-- scrollContent2 end		 -->
+					</td>
+				  </tr>
+			</table>
+		</div>
+		
+		
+ </div> 
+ <div class="scrollContentFix">
+ 
+
+	 <div id="scrollContentFix" style=""  class="scrollContent">   
+		<div class="scrollContent_con">
+			<p>内容1</p>
+			<p>内容2</p>
+			<p>内容3</p>
+			<p>内容4</p>
+			<p>内容5</p>
+			<p>内容6</p>
+			<p>内容7</p>
+			<p>内容8</p>
+			<p>内容9</p>
+			<p>内容10</p>
+			<p>内容11</p>
+			<p>内容12</p>
+			<p>内容13</p>
+			<p>内容14</p>
+			<p>内容15</p>
+		</div>
+		<!-- scrollContent_con end -->
+	</div> 
+	<!-- scrollContentFix end --> 
+ </div>
+ 
+ <div class="container">
+
+    <div class="inner">Hello</div>
+
+ <p>asdasd</p>
+    <div class="inner">Goodbye</div>
+ <p>asdasd</p>
+  <p>asdasd</p>
+   <p>asdasd</p>
+   <div 	class="inner">Goodbye
+	   <p>asdasd</p>
+   </div>
+</div>
+<script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="scripts/scrollBar.js"></script>
+ <script type="text/javascript">
+  		
+		
+		$('.inner').wrapAll('<div class="new" />');
+	/**************************************************************************************************************************************************************
+	 *	方法名：						addScrollBar()		
+	 *	使用范例 ： 				    $("#scrollContentHorizontal").addScrollBar({});		
+	 *	dir								滚动条出现的方向 默认为垂直  "v" 可选参数 "h"；
+	 *	tweenTime						缓动时间，毫秒数
+	 *	step							鼠标滚轮滑动的距离 参数为 number 类型
+	 *	AutoTrackHeight					Boolearn值,设置滚动条是否自动适应高度，false为固定滚动条高度 
+	 *	bindArrowEvent					Boolearn值,默认为false,判断是否为箭头绑定事件
+	 *	hideScrollBar					Boolearn值,默认为false,是否绑定鼠标移入和移除事件
+	 *	scrollBarMargin					number 类型,为正数,决定滚动条和箭头之间的距离
+	 *	scrollBarContainWidth			滚动条容器的宽度,number 类型,为正数
+	 *	scrollBarContainHeight			滚动条容器的高度,number 类型,为正数
+	 *	scrollArrowWidth				箭头的宽度,number 类型,为正数
+	 *	scrollBarHeight					箭头的高度,number 类型,为正数
+	 *	scrollBarWidth					滚动条的宽度,number 类型,为正数
+	 *  scrollBarHeight					滚动条的高度,number 类型,为正数
+	 *	scrollBarContain				滚动条容器的类名
+	 *	arrowUp							上箭头（左箭头）的类名	
+	 *	arrow_down						下箭头（下箭头）的类名	
+	 *  scrollBar 						滚动条的类名
+	 *	callback						回调函数 function(){} 类型
+	 *默认参数设置如下：
+			dir : "v",
+			step : 2,
+			tweenTime : 300,
+			AutoTrackHeight : false,
+			bindArrowEvent : true,
+			hideScrollBar : false,
+			scrollBarMargin : 3,
+			scrollBarContainWidth : 15,
+			scrollBarContainHeight : 15,
+			scrollArrowWidth : 15,
+			scrollArrowHeight : 15,
+			scrollBarWidth : 15,
+			scrollBarHeight : 30,
+			scrollBarContain : "scrollBarContain",
+			arrowUp : "arrow_up",
+			arrowDown : "arrow_down",
+			scrollBar : "scroll_bar",
+			callback : null
+	*************************************************************************************************************************************************/
+	+function(window,$){
+			$("#scrollContentHorizontal").addScrollBar({
+				dir : "h",
+				scrollBarWidth : 30,
+				scrollBarHeight : 15,
+				scrollBarMargin : 5,
+				hideScrollBar : true
+			});
+			$("#scrollContent").addScrollBar({
+				dir : "v",
+				step : 5,
+				AutoTrackHeight : false,
+				hideScrollBar:true
+			});
+			$("#scrollContent2").addScrollBar({
+				dir : "v",
+				scrollBarMargin : 0,
+				AutoTrackHeight : true
+			});
+			$("#scrollContent3").addScrollBar({
+				dir : "v",
+				scrollBarMargin:0,
+				scrollArrowWidth : 0,
+				scrollArrowHeight : 0
+			});
+			
+			//$("#scrollContent4").addScrollBar();
+			
+			$("#scrollContentFix p").click(function(){
+				console.log($(this).html());
+			})
+			$("#scrollContentFix").addScrollBar();
+			
+			
+	}(window,jQuery);		
+		$(window).bind("resize", function () {
+					
+					
+				//	alert(0)
+					
+				});	
+  </script>
+</body>
+</html>
+
+
+	
+    
+
+
+
+
+
+
+
+

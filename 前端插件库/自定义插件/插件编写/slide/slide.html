@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- build:css ../css/main.css -->
+    <!-- endbuild -->
+    <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none ;
+            }
+            .fd-scroll-area{
+                border: 1px solid #ccc;
+                width: 200px;
+                height: 50px;
+                margin: 20px;
+            }
+            li {
+                padding: 0 5px;
+                min-width: 150px;
+                line-height: 50px;
+            }
+    </style>
+</head>
+<body>
+<div class="fd-contain">
+    <div class="fd-scroll-area"  id="jsScrollArea">
+
+    </div>
+    <div class="fd-scroll-area"  id="jsScrollArea2">
+
+    </div>
+</div>
+<!--fd-contain end-->
+<script src="js/jQuery.v1.11.1.min.js"></script>
+<script src="js/slide.min.js"></script>
+<script>
+    // demo
+    $('#jsScrollArea').slide({
+        interval:30,  // 间隔时间
+        autoplay:true, // 是否自动播放
+        valueName:'value', //
+        data:[
+            {value:"张三",key:'1',href:'http://www.baidu.com'},
+            {value:"李四",key:'2',href:'http://www.baidu.com'},
+            {value:"王五",key:'9'},
+            {value:"赵六",key:'10'}
+        ],
+        callback: function (_this) {
+            console.log(_this.data('key'))
+        }
+    });
+    // 简写
+    $('#jsScrollArea2').slide();
+
+</script>
+</body>
+</html>

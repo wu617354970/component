@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>计算器</title>
+	<link rel="stylesheet" type="text/css" href="css/import.css" media="all" />
+	<style type="text/css">
+		html,body {
+				background-color:#ccc;
+			}
+		.fd_item {
+			float:left;	
+			margin:5px 10px;
+			padding:10px;
+			font:16px/40px "Microsoft YaHei";
+			border:1px solid #000;	
+			clear:both;		
+			background-color:#fff;	
+		}
+		.fd_item label {
+				padding-right:20px;
+			}
+		input{
+				width:200px;
+				height:40px;
+				border:1px solid #ddd;
+				padding:0 10px;
+				color:#333;
+				font:16px/40px "Microsoft YaHei";
+			}
+	</style>
+</head>
+<body>
+	<div class="fd_item">
+		<label for="">除法</label>
+		<input type="text" name="" id="fdInput1" />&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;
+		<input type="text" name="" id="fdInput2" />&nbsp;=&nbsp;
+		<input type="text" name="" id="fdInput3" />
+	</div>
+	<div class="fd_item">
+		<label for="">乘法</label>
+		<input type="text" name="" id="fdInput4" />&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;
+		<input type="text" name="" id="fdInput5" />&nbsp;=&nbsp;
+		<input type="text" name="" id="fdInput6" />
+	</div>
+	<div class="fd_item">
+		<label for="">减法</label>
+		<input type="text" name="" id="fdInput7" />&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;
+		<input type="text" name="" id="fdInput8" />&nbsp;=&nbsp;
+		<input type="text" name="" id="fdInput9" />
+	</div>
+	<div class="fd_item">
+		<label for="">加法</label>
+		<input type="text" name="" id="fdInput10" />&nbsp;&nbsp;+&nbsp;&nbsp;
+		<input type="text" name="" id="fdInput11" />&nbsp;=&nbsp;
+		<input type="text" name="" id="fdInput12" />
+	</div>
+	<script type="text/javascript" src="jquery-1.8.2.min.js"></script>	
+	<script type="text/javascript">
+		$(function(){
+			$("#fdInput1,#fdInput2").bind("input propertychange blur  change",function(){
+					var _val1=Number($("#fdInput1").val());
+					var _val2=Number($("#fdInput2").val());
+					var _euqal=_val1/_val2*1;
+					$("#fdInput3").val(_euqal);
+			
+			})
+			$("#fdInput4,#fdInput5").bind("input propertychange blur  change",function(){
+					var _val1=Number($("#fdInput4").val());
+					var _val2=Number($("#fdInput5").val());
+					var _euqal=_val1*_val2*1;
+					$("#fdInput6").val(_euqal);
+			
+			});	
+			$("#fdInput7,#fdInput8").bind("input propertychange blur  change",function(){
+					var _val1=Number($("#fdInput7").val());
+					var _val2=Number($("#fdInput8").val());
+					var _euqal=parseFloat(_val1)-parseFloat(_val2);
+					$("#fdInput9").val(_euqal);
+			
+			});	
+			$("#fdInput10,#fdInput11").bind("input propertychange blur  change",function(){
+					var _val1=Number($("#fdInput10").val());
+					var _val2=Number($("#fdInput11").val());
+					var _euqal=_val1+_val2*1;
+					$("#fdInput12").val(_euqal);
+			
+			});	
+		});
+		
+	</script>
+</body>
+</html>

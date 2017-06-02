@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>addTips</title>
+	<link rel="stylesheet" type="text/css" href="css/tips.css" media="all" />
+	<style type="text/css">
+		button {
+				margin:50px;
+			}
+		a {
+				margin:50px;
+			}	
+		button,a {
+			width:250px;
+			height:60px;
+			text-align:center;			
+			display:block;	
+			background-color:#fff;
+			border:1px solid #ddd;
+			color:#333;
+			cursor:pointer;
+			border-radius:10px;
+			text-decoration:none;
+			font:24px/60px "Microsoft YaHei";
+		}
+		a {
+				bottom:0;
+			}
+		button:hover,
+		a:hover {
+				text-decoration:none;
+				background-color:#f1f1f1;
+			}	
+	</style>
+</head>
+<body>
+	<button class="button_01">我是按钮</button>
+	
+	<a href="javascript:void(0);" class="button_02">我是链接的提示</a>
+	
+	<div class="fd_popup_tips fd_popup_tips1">我是提示框</div>
+	<div class="fd_popup_tips  fd_popup_tips2">我是提示框</div>
+	<!-- fd_skin_artery4_contain end -->
+	<script type="text/javascript" src="scripts/jQuery.v.11.1.min.js"></script>
+	<script type="text/javascript" src="scripts/addTips.js"></script>
+	<script type="text/javascript" >
+			$(".button_01").addTips({
+				popupTipsContain : ".fd_popup_tips1", // 获取弹出层对象
+				scrollContainId : null, 			//  滚动容器
+				callback : null,
+				space : 8,							//  与触发元素之间的间距
+				showMousetype : "click",
+				isHide : true,
+				ueserSelfHide : null, 					// 用户自己隐藏
+				addUpClass : null 						// 弹出层出现在上方，为弹出层容器增加一个className，为了控制样式
+				/*********************************************************************************
+				ueserSelfHide : function () {
+					$(document).bind("click", function (event) {
+						var _event = event || window.event;
+						var _target = $(_event.target);
+						if($(".popup_time_contain").is(":visible")){
+							if (_target.hasClass("popup_time_contain") || _target.parents().hasClass("popup_time_contain") || _target.hasClass("btn_wrap_time") || _target.parents().hasClass("btn_wrap_time")) {
+								return;
+							} else {
+								$(".popup_time_contain").hide(); //  隐藏弹出层
+							}
+						}
+					});
+				}
+			   **********************************************************************************/
+			});
+			$(".button_02").addTips({
+				popupTipsContain : ".fd_popup_tips2", // 获取弹出层对象
+				scrollContainId : null, 			//  滚动容器
+				callback : null,
+				space : 8,							//  与触发元素之间的间距
+				showMousetype : "click",
+				isHide : false,
+				ueserSelfHide : function () {		// 用户自己隐藏
+					$(document).bind("click", function (event) {
+						var _event = event || window.event;
+						var _target = $(_event.target);
+						if($(".fd_popup_tips2").is(":visible")){
+							if (_target.hasClass("fd_popup_tips2") || _target.parents().hasClass("fd_popup_tips2") || _target.hasClass("button_02") || _target.parents().hasClass("button_02")) {
+								return;
+							} else {
+								$(".fd_popup_tips2").hide(); //  隐藏弹出层
+							}
+						}
+					});
+				}, 					
+				addUpClass : "fd_popup_tips_top" 						// 弹出层出现在上方，为弹出层容器增加一个className，为了控制样式
+			});
+
+	</script>
+</body>
+</html>

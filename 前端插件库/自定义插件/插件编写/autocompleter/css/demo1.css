@@ -1,0 +1,15 @@
+.fd-contain {
+    margin: 0 auto;
+    position: relative;
+    width: 500px;
+    min-height: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+#jsContent {
+    padding: 10px 0;
+}
+#jsContent p {
+    line-height: 30px;
+    border-bottom: 1px solid #ddd;
+}

@@ -1,0 +1,17 @@
+{
+  "success":true,
+  "data":[
+    {
+      "name": "张三",
+      "category": 2,
+      "money": 30
+    },
+    {
+      "name": "赵四",
+      "category": 3,
+      "money": 96
+    }
+  ],
+  "message":"请求数据成功",
+  "code":200
+}

@@ -1,0 +1,103 @@
+﻿{
+    "code": 200,
+    "data": {
+            "limit": 10,
+            "total": 30,
+            "dataList":[
+                {
+                    "fbdm" : "011Z",
+                    "fydm" : "2",
+                    "fyjb" : "3",
+                    "fyjc" : "北京一中院",
+                    "isXq" : "false",
+                    "mapId" : "110199",
+                    "xqmc" : "北京市第一中级人民法院"
+                },
+                {
+                    "fbdm" : "0113",
+                    "fydm" : "5",
+                    "fyjb" : "4",
+                    "fyjc" : "石景山法院",
+                    "isXq" : "false",
+                    "mapId" : "110103",
+                    "xqmc" : "北京市石景山区人民法院"
+                }, {
+                    "fbdm" : "0114",
+                    "fydm" : "6",
+                    "fyjb" : "4",
+                    "fyjc" : "海淀法院",
+                    "isXq" : "false",
+                    "mapId" : "110104",
+                    "xqmc" : "北京市海淀区人民法院"
+                }, {
+                    "fbdm" : "0115",
+                    "fydm" : "7",
+                    "fyjb" : "4",
+                    "fyjc" : "门头沟法院",
+                    "isXq" : "false",
+                    "mapId" : "110105",
+                    "xqmc" : "北京市门头沟区人民法院"
+                }, {
+                    "fbdm" : "0117",
+                    "fydm" : "9",
+                    "fyjb" : "4",
+                    "fyjc" : "昌平法院",
+                    "isXq" : "false",
+                    "mapId" : "110107",
+                    "xqmc" : "北京市昌平区人民法院"
+                }, {
+                    "fbdm" : "0119",
+                    "fydm" : "11",
+                    "fyjb" : "4",
+                    "fyjc" : "延庆法院",
+                    "isXq" : "false",
+                    "mapId" : "110109",
+                    "xqmc" : "延庆县人民法院"
+                },
+                {
+                    "fbdm" : "0113",
+                    "fydm" : "5",
+                    "fyjb" : "4",
+                    "fyjc" : "石景山法院",
+                    "isXq" : "false",
+                    "mapId" : "110103",
+                    "xqmc" : "北京市石景山区人民法院"
+                }, {
+                    "fbdm" : "0114",
+                    "fydm" : "6",
+                    "fyjb" : "4",
+                    "fyjc" : "海淀法院",
+                    "isXq" : "false",
+                    "mapId" : "110104",
+                    "xqmc" : "北京市海淀区人民法院"
+                }, {
+                    "fbdm" : "0115",
+                    "fydm" : "7",
+                    "fyjb" : "4",
+                    "fyjc" : "门头沟法院",
+                    "isXq" : "false",
+                    "mapId" : "110105",
+                    "xqmc" : "北京市门头沟区人民法院"
+                }, {
+                    "fbdm" : "0117",
+                    "fydm" : "9",
+                    "fyjb" : "4",
+                    "fyjc" : "昌平法院",
+                    "isXq" : "false",
+                    "mapId" : "110107",
+                    "xqmc" : "北京市昌平区人民法院"
+                }, {
+                    "fbdm" : "0119",
+                    "fydm" : "11",
+                    "fyjb" : "4",
+                    "fyjc" : "延庆法院",
+                    "isXq" : "false",
+                    "mapId" : "110109",
+                    "xqmc" : "延庆县人民法院"
+                }
+
+            ]
+        },
+    "message": "OK",
+    "success": true
+}

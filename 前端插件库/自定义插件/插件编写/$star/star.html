@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>评分插件</title>
+	<style type="text/css">
+		*{
+				margin:0;
+				padding:0;
+			}
+		#star,#star2,#star3{
+				margin-bottom:20px;
+				padding:20px;
+				width:950px;
+				height:30px;
+				border:1px solid #000;
+			}
+		.fd_connect{
+				margin:0 30px;
+				padding:0 5px;
+				display:inline-block;
+				vertical-align:middle;
+				width:100px;
+				height:30px;
+				font:14px/30px "Microsoft YaHei";
+				border:1px solid #ddd;
+			}
+	</style>
+</head>
+<body>
+	<div id="star"></div>
+	<div id="star2"></div>
+	<div id="star3"><input type="" class="fd_connect" /></div>
+	<div id="star3"></div>
+	<div id="star4"></div>
+	<div class="getContent"></div>
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="js/star.js"></script>
+	<script type="text/javascript">
+	/*********************************************************************************************************************************************
+	 *	方法名：						addStar()		
+	 *	使用范例 ： 				    $("#accordion").addStar({});		
+	 *	mouseType						事件类型
+	 *	starWidth						星宽度
+	 *	starHeight						星高度
+	 *	starSize						星的个数
+	 *	getScore						满分
+	 *	url								星的路径
+	 *	starFont						获取值容器的字体样式
+	 *	backgroundColor					选中后星的背景色
+	 *	decimal							评分后面保留的小数位数
+	 *	isSetValue						是否可以手动输入值	//  默认false
+	 *	isHideDefaultGetValue			是否隐藏默认获取值的容器
+	 *	type:1,  						数值为1,2,3,1代表点一下一个星星，2代表可以取一半的星星，3任意数值
+	 *	connectInput					关联设置值的容器类名	//  最好隐藏默认输入值的容器 isSetValue：false  即可
+	 *	callback						回调函数，function(num){};  num会获得评分值
+	***************************************************************************************************************************************************/
+		// 默认参数实例
+		$("#star").addStar({
+			mouseType : "click",
+			starWidth : 30,
+			starHeight : 30,
+			starSize : 9,
+			getScore : 100,
+			url : "images/star.png",
+			starFont : "14px/30px 'Microsoft YaHei'",
+			backgroundColor : "red",
+			decimal : 2, //  保留小数位数
+			isSetValue : false,
+			isHideDefaultGetValue : false,
+			connectInput : "",
+			callback : null
+		});
+		// 设置值实例
+		$("#star2").addStar({
+			starSize:5,
+			getScore:5,
+			url:"images/star.png",
+			isSetValue:true
+		});
+		//  关联实例
+		$("#star3").addStar({
+			mouseType:"click",
+			starSize:12,
+			getScore:10,
+			url:"images/star.png",
+			isSetValue:false,
+			connectInput:".fd_connect"
+		});
+		//  回调函数实例
+		$("#star4").addStar({
+			mouseType:"click",
+			starSize:12,
+			getScore:10,
+			url:"images/star.png",
+			isSetValue:false,
+			isHideDefaultGetValue:true,
+			callback:function(num){
+					$(".getContent").text(num);
+				}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="js/jquery1.7.1.min.js"></script>
+</head>
+
+<body style="height:5000px;">
+<div style="width:10000px; height:10000px; left:0px;top:0px"></div>
+
+
+<!---->
+<div id="BottomRight" style="position:absolute;left:0px;top:0px;width:200px; height:200px; background:#666;">
+	<input type="button" value="close" class="closeBtn"/>
+</div>
+
+<div id="BottomLeft" style="position:absolute;left:0px;top:0px;width:200px; height:200px; background:#666;">
+	<input type="button" value="close" class="closeBtn"/>
+</div>
+
+<div id="Center" style="position:absolute;left:0px;top:0px;width:200px; height:200px; background:#666;">
+	<input type="button" value="close" class="closeBtn"/>
+</div>
+
+<div id="TopRight" style="position:absolute;left:0px;top:0px;width:200px; height:200px; background:#666;">
+	<input type="button" value="close" class="closeBtn"/>
+</div>
+
+<div id="TopLeft" style="position:absolute;left:0px;top:0px;width:200px; height:200px; background:#666;">
+	<input type="button" value="close" class="closeBtn"/>
+</div>
+
+<div id="CenterLeft" style="position:absolute;left:0px;top:0px;width:200px; height:200px; background:#666;">
+	<input type="button" value="close" class="closeBtn"/>
+</div>
+
+<div id="CenterRight" style="position:absolute;left:0px;top:0px;width:200px; height:200px; background:#666;">
+	<input type="button" value="close" class="closeBtn"/>
+</div>
+    
+<script type="text/javascript" src="js/window.z.js"></script>
+<script type="text/javascript">
+	$('#BottomRight').addWindow({position:"BottomRight",marginBottom:50,marginRight:50});
+	$('#BottomLeft').addWindow({position:"BottomLeft"});
+	$('#Center').addWindow({position:"Center"});
+	$('#TopRight').addWindow({position:"TopRight"});
+	$('#TopLeft').addWindow({position:"TopLeft"});
+	$('#CenterLeft').addWindow({position:"CenterLeft"});
+	$('#CenterRight').addWindow({position:"CenterRight"});
+</script>
+
+</body>
+</html>

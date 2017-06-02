@@ -1,0 +1,46 @@
+<div class="fd-pagination "  ng-class="addClass">
+    <div class="fd-info"  ng-show="showPaginationInfo">
+        当前页:<span
+            ng-show="itemCount"
+            ng-bind="itemCount+'条'"></span>
+    </div>
+    <ul class="fd-operate"   ng-show="showPagination">
+        <!-- 第一页-->
+        <li     class="fd-first"
+                ng-class="{'disabled':currentPage===1}"
+                ng-show="showFirstLast"
+                ng-click="pageChange(1)"
+                 ng-bind="firstText"
+                ></li>
+        <!-- 前一页-->
+        <li     class="fd-prev"
+                ng-class="{'disabled':currentPage===1}"
+                ng-click="pageChange(currentPage-1>0?currentPage-1:1)"
+                ng-bind="prevText"
+                ></li>
+
+        <li    class="fd-page-count"
+               ng-repeat="pagenum in pagenums"
+               ng-click="pageChange(pagenum)"
+               ng-class="{active:currentPage===pagenum}"
+               ng-bind="pagenum"
+                ></li>
+        <!-- 后一页-->
+        <li
+                class="fd-next"
+                ng-class="{'disabled':currentPage===pageCount}"
+                ng-click="pageChange(currentPage+1<=pageCount?currentPage+1:pageCount)"
+                ng-bind="nextText"
+                >
+        </li>
+        <!-- 最后一页-->
+        <li
+                class="fd-last"
+                ng-class="{'disabled':currentPage===pageCount}"
+                ng-show="showFirstLast"
+                ng-bind="lastText"
+                ng-click="pageChange(pageCount)">
+        </li>
+    </ul>
+</div>
+<!--fd-turn-page end-->

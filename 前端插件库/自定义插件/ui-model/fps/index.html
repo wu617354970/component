@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		canvas {
+			border:1px solid #ddd;	
+		}
+	</style>
+</head>
+<body>
+
+	<canvas id="jsCanvas"  width="500px"  height="500px">您的浏览器不支持canvas</canvas>
+	
+	<script type="text/javascript" src="js/fps.js"></script>
+	<script type="text/javascript" >
+			
+			var  jsCanvas=document.getElementById('jsCanvas');
+			var  canvas=jsCanvas.getContext('2d');		
+				 canvas.fillRect(0,0,200,200);
+				 var  i=0;
+				 var  flag=true;
+				
+			var  fps=new FPS();
+				fps.go(function(){
+					canvas.clearRect(0,0,500,500);
+					
+					//for(var j=0; j<1;j++){
+					 if(flag){
+						i++;	
+					 }else {
+						i--;
+					 }
+					 if(i>400){
+						flag=false;
+					 }
+					 if(i<1){
+						flag=true;
+					 }
+					 var  r=Math.round(Math.random()*255);
+					 var  g=Math.round(Math.random()*255);
+					 var  b=Math.round(Math.random()*255);
+					 canvas.fillStyle='rgb('+r+','+g+','+b+')';
+					 canvas.fillRect(i,i,100,100);
+					//}
+					
+					
+				})
+	</script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+@charset "utf-8";
+/*css document*/
+/************************************
+ *	Version 		14.09.01
+ *	Author			wuwg
+ *  CreateTime      14.09.03
+ *	UpdateTime		14.09.03
+ **************************************/
+ * {
+	margin:0;
+	padding:0;
+	word-break:break-all;
+	word-wrap:break-word;
+ }
+ img {
+		border:0;
+		border:none;
+		vertical-align:middle;
+	}
+ul,ol {
+		list-style:none;
+	}
+a { 
+	text-decoration:none;
+	cursor:pointer;
+	}
+	
+a:focus { 
+	outline-style:none;
+	}
+	 
+a:hover { 
+	text-decoration:underline;
+	}	
+/*----------------------------------------- theme   banner ----------------------------------*/	
+
+.fd_focusimg_wrap {
+		width:480px;
+		height:350px;
+	}
+/*------------------------          horizontal   ----------------------------*/	
+.fd_focusimg  {
+		position:relative;	
+		width:480px;
+		overflow:hidden;
+	}	
+.d_btn {
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:0px;
+		line-height:0;
+		font-size:0;
+		text-indent:-9999em;
+		z-index:99999;
+	}
+.fd_focusimg  .sp_pre ,
+.fd_focusimg  .sp_next{
+		position:absolute;
+		top:120px;
+		width:33px;
+		height:33px;
+		line-height:0;
+		font-size:0;
+		text-indent:-9999em;
+		cursor:pointer;
+	}	
+.fd_focusimg  .sp_pre  {
+		left:5px;
+		background: url(../images/arrow_left.png) center center no-repeat;
+	}	
+.fd_focusimg  .sp_next {
+		right:5px;
+		background: url(../images/arrow_right.png) 0 0 no-repeat;
+	}		
+.fd_focusimg .con {	
+		position:relative;
+		width:480px;
+		height:270px;
+		overflow:hidden;
+	}	
+.fd_focusimg .con  li,
+.fd_focusimg .con  li  img {
+		width:480px;
+		height:270px;
+		overflow:hidden;
+	}	
+
+.fd_focusimg  .index {
+		display:none;
+		z-index:999;
+		width:10000px;
+		padding:0 0px 6px 5px;
+		text-align:right;
+		background-color:#e7e7e7;
+		zoom:1;
+	}	
+.fd_focusimg  .index:after {
+		content:"";
+		display:block;
+		clear:both;
+	}	
+.fd_focusimg  .index  li {
+		float:left;
+		padding:10px 5px 4px;
+		width:84px;
+		height:63px;
+		overflow:hidden;
+		vertical-align:top;
+		line-height:18px;
+	}
+.fd_focusimg  .index a {
+	}
+.fd_focusimg  .index   img {
+		float:left;
+		width:84px;
+		height:63px;
+	}	
+.fd_focusimg  .index a:hover {
+		background-color:#d2ebff;
+		text-decoration:none;
+	}	
+.fd_focusimg  .index .on  {
+		background: url(../images/preview_box.jpg) center center no-repeat;
+	}	
+.fd_focusimg  .index .on  img{
+		width:82px;
+		height:61px;
+		border:1px solid #fff;
+	}
+/*--------  带标题的文本 focusimg -------*/	
+.fd_focusimg .con  li {
+		position:relative;
+	}	
+.fd_focusimg .con  .p_title {
+		position:absolute;
+		bottom:0;
+		height:40px;
+		padding:0 10px;
+		white-space:nowrap;
+		max-width:100%;
+		z-index:99;
+		color:#fff;
+		font:700 18px/40px "Microsoft YaHei";
+	}
+.focusimg_filter {
+		position:absolute;
+		bottom:0;
+		height:40px;
+		width:100%;
+		z-index:9;
+		background-color:#000;
+		filter:alpha(opacity=60);
+		opacity:0.6;
+	}
+	
+/*----------------------------------------- theme   banner  fd_focusimg_area----------------------------------*/	
+/*fd_focusimg_area*/	
+.fd_focusimg_area   {  
+	position:relative;
+	width:980px;
+	overflow:hidden;
+}
+/*--------  按钮区域*/
+.fd_focusimg_area   .a_btn_pre,
+.fd_focusimg_area   .a_btn_next { 
+	position:absolute;
+	top:50px;
+	width:20px;
+	height:20px;
+	background:#f4f4f4  url(../images/icon1.png) 0 0 no-repeat;
+	cursor:pointer;
+}
+.fd_focusimg_area   .a_btn_pre { 
+		left:0px;
+		background: url(../images/arrow_left_normal.jpg) center center no-repeat;
+	}
+.fd_focusimg_area   .a_btn_pre:hover {
+		background-image:url(../images/arrow_left.jpg);
+	}	
+.fd_focusimg_area   .a_btn_next { 
+		right:0px;
+		background: url(../images/arrow_right_normal.jpg) center center no-repeat;
+	}
+.fd_focusimg_area   .a_btn_next:hover {
+		background-image:url(../images/arrow_right.jpg);
+	}	
+/*scroll_pic*/
+.fd_focusimg_area   .scroll_pic_wrap { 
+		position:relative;
+		margin-left:45px;
+		width:880px;
+		overflow:hidden;
+	}
+.fd_focusimg_area    .scroll_pic  { 
+		width:100%;
+		overflow:hidden;
+		height:190px;
+	}
+.fd_focusimg_area    .scroll_pic  ul  {  
+	width:10000px;
+	zoom:1;
+	}
+.fd_focusimg_area    .scroll_pic  ul:after{
+	content:"";
+	display:block;
+	clear:both;
+	} 
+.fd_focusimg_area    .scroll_pic li    { 
+	float:left;
+	margin-left:10px;
+	padding:5px;
+	width:200px;
+	height:180px;
+	overflow:hidden;
+	background-color:#e7e7e7;
+	display:inline;
+	}
+.fd_focusimg_area    .scroll_pic li.on {
+		border:1px solid red;
+		padding:4px;
+	}	
+.fd_focusimg_area    .scroll_pic  span,
+.fd_focusimg_area    .scroll_pic  a {
+		float:left;
+		width:100%;
+		clear:both;
+	}
+.fd_focusimg_area    .scroll_pic  img {
+	float:left;
+	clear:both;
+	width:200px;
+	height:150px;
+	border:1px solid #ccccca;
+	}
+.fd_focusimg_area    .scroll_pic .sp_text  { 
+	text-align:center;
+	color:#333;
+	font:14px/30px SimSun;
+	}
+.fd_focusimg_area    .scroll_pic  .sp_text a {
+	color:#333;
+	}
+.fd_focusimg_area    .scroll_pic .sp_text a:hover  { 
+	color:#ff0000;
+	}	

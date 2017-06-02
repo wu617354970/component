@@ -1,0 +1,9 @@
+
+/*demo用例在引用的时候不需要写这个*/
+.fd-con { height:300px;border:1px solid #ddd; display:none; text-align:center;font:30px/100px "Microsoft YaHei"; }
+h2 { padding: 15px 0px;color: #333;text-align: center;clear:both;font: 700 18px/30px "Microsoft YaHei";border-bottom:1px solid #ddd;}
+p { color: #999;text-align: center;font: 12px/26px SimSun;}
+li{padding:0 20px;min-height:60px;line-height:60px;border-bottom:1px solid #ddd;}
+.fd-hide { display:none;}
+.fd-scroll-contain.horizontal .fd-scroll-content{ margin-top:3%;height:90%;}
+.fd-scroll-contain.horizontal li {width:200px;float:left;box-sizing:border-box;height:100%;border:1px solid #ddd;line-height:15em;text-align:center;}

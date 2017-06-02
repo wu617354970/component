@@ -1,0 +1,146 @@
+@charset "utf-8";
+/*css document*/
+
+/************************************
+ *	Version 		14.0.1
+ *	Author			wuwg
+ *  CreateTime      14.07.14
+ *	UpdateTime		14.07.14
+ **************************************/
+ 
+ .contain {
+		min-width:1002px;
+		width:100%;
+		height:100%;
+		background-color:#fff;
+	}
+.main {
+		margin:0 auto;
+		padding:20px 0;
+		width:1002px;	
+	}	
+.h2_18_m {
+		padding:15px 0;
+		color:#333;
+		text-align:center;
+		font:700 18px/30px "Microsoft YaHei";
+	}
+.h3_16_m {
+		color:#333;
+		text-align:center;
+		font:700 16px/30px "Microsoft YaHei";
+	}	
+.p_info {
+		color:#999;
+		text-align:center;
+		font:12px/26px SimSun;
+	}	
+.table_contain{
+		width:100%;
+	}	
+.table_contain td {
+		padding:10px ;
+	}
+/*----------------------------------------- theme  js  tab----------------------------------*/	
+.jd_tab {
+		padding:20px ;
+		border:1px solid #ddd;
+		
+	}
+.jd_tab .con {
+		color:#666;
+		font:14px/30px "Microsoft YaHei";
+		height:200px;
+	}
+.jd_tab .con_item {
+		padding:30px 20px; 
+	}  	
+.nav{
+		width:100%;
+		zoom:1;
+		background: url(../images/main_nav_wrap_bj.png) 0 0 repeat-x;
+	}	
+.nav:after {
+		content:"";
+		display:block;
+		clear:both;
+	}	
+.nav  li {
+		display:inline;
+		float:left;
+		padding-left:2px;
+		width:108px;
+		height:50px;
+		background: url(../images/main_nav_li_bj.gif) 0 0 no-repeat;
+		font:16px/28px "Microsoft YaHei";
+		white-space:nowrap;
+		text-align:center;
+		overflow:hidden;
+	}
+.nav   li    a {
+		float:left;
+		padding:10px 0;
+		width:100%;	
+		color:#fff;
+		border-bottom:2px solid #00649c;
+	}	
+.nav   li    a:hover {
+		text-decoration:none;
+	} 	
+/*----------------------------------------------  only --------------------------------------------*/		
+.nav .on   a ,
+.nav .on   a:hover {
+		padding-top:8px;
+		color:#016299;
+		border-top:2px solid #006daa;
+		border-bottom-color:#fff;	
+		background-color:#fff;
+	}	
+/*----------------------------------------------  mulit --------------------------------------------*/	
+.nav .on1   a ,
+.nav .on1   a:hover ,
+.nav .on2   a ,
+.nav .on2   a:hover ,
+.nav .on3   a ,
+.nav .on3   a:hover ,
+.nav .on4   a ,
+.nav .on4   a:hover ,
+.nav .on5   a ,
+.nav .on5   a:hover ,
+.nav .on6   a ,
+.nav .on6   a:hover {
+		padding-top:8px;
+		color:#016299;
+		border-top:2px solid #006daa;
+		
+	}	
+.nav .on1   a ,
+.nav .on1   a:hover  {
+		border-bottom-color:#fee4e9;	
+		background-color:#fee4e9;
+	}	
+.nav .on2   a ,
+.nav .on2   a:hover  {
+		border-bottom-color:#fee4fa;	
+		background-color:#fee4fa;
+	}
+.nav .on3   a ,
+.nav .on3   a:hover  {
+		border-bottom-color:#fdd8d0;	
+		background-color:#fdd8d0;
+	}
+.nav .on4   a ,
+.nav .on4   a:hover  {
+		border-bottom-color:#e4f2fe;	
+		background-color:#e4f2fe;
+	}
+.nav .on5   a ,
+.nav .on5   a:hover  {
+		border-bottom-color:#e4fee5;	
+		background-color:#e4fee5;
+	}
+.nav .on6   a ,
+.nav .on6   a:hover  {
+		border-bottom-color:#fef3e4;	
+		background-color:#fef3e4;
+	}	

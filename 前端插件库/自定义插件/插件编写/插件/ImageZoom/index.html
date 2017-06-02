@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+	<style type='text/css'>
+	
+		body{margin:0; padding:0;}
+		
+		ul{ position:relative; top:0px; left:0px;}
+		ul li { list-style:none; width:300px; height:300px; border:1px solid #000; margin-bottom:5px; overflow:hidden;}
+		
+		img{ position:relative; }
+		
+	</style>
+</head>
+
+<body>
+	<div id="imgList">
+    	<ul>
+			<li><img src="images/1.jpg"/></li>
+            <li><img src="images/1.jpg"/></li>
+            <li><img src="images/1.jpg"/></li>
+            <li><img src="images/1.jpg"/></li>
+            <li><img src="images/1.jpg"/></li>
+            <li><img src="images/1.jpg"/></li>
+        </ul>
+    </div>
+	
+	<script type="text/javascript" src="js/imagezoom.z.js"></script>
+	<script type='text/javascript'>
+	
+			/**
+			* ___________________________________正常缩放 居中父容器______________________________________
+			* box 				缩放容器组的ID			(如果不传入则选择页面中所有的图片)
+			* parentWidth		图片所在父容器的宽度	(如果设置isCenter为false 则不用传入)
+			* parentHeight		图片所在父容器的高度	(同上注释);
+			* zoomWidth			缩放宽度				(必写)
+			* zoomHeight		缩放高度				(必写)
+			* isCenter  		默认为 true 			(可不写)
+			* mode				默认为正常缩放 			(可不写)
+			* ____________________________________________________________________________________________
+			*/
+			
+			///*
+			YM.ImageZoom({
+				box:'imgList',
+				parentWidth : 300,
+				parentHeight : 300,
+				zoomWidth : 200,
+				zoomHeight : 200,
+				isCenter : true,
+				mode : 0
+			});
+			//*/
+			
+			/**
+			* ___________________________________居中父容器填充缩放______________________________________
+			* box 				缩放容器组的ID			(如果不传入则选择页面中所有的图片)
+			* parentWidth		图片所在父容器的宽度	(必写)
+			* parentHeight		图片所在父容器的高度	(必写);
+			* zoomWidth			缩放宽度				(可不写  这里获取的是父容器的高度和宽度)
+			* zoomHeight		缩放高度				(可不写)
+			* isCenter  		默认为 true 			(可不写)
+			* mode				传入 1 					(可不写)
+			* ____________________________________________________________________________________________
+			*/
+			
+			/*
+			YM.ImageZoom({
+				box:'imgList',
+				parentWidth : 300,
+				parentHeight : 300,
+				zoomWidth : 200,
+				zoomHeight : 200,
+				isCenter : true,
+				mode : 1
+			});
+			*/
+		
+	</script>
+</body>
+</html>

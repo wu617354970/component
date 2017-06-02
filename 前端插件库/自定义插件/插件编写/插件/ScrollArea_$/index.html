@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+
+	<style type="text/css">
+	
+		body{ margin:0; padding:0;}
+		
+		/******垂直滚动样式*******/
+    .vscroller{ width:100px; height:205px; position:relative;					 left:200px; top:200px;}
+		
+		.vscroller .scroller{ position:relative; width:100px; height:152px; overflow:hidden; margin-top:5px; margin-bottom:5px;}
+		.vscroller .pre { width:50px; height:20px;  background-color:#000; cursor:pointer; text-align:center; display:block; margin-left:20px;}
+		.vscroller .next{ width:50px; height:20px;  background-color:#000; cursor:pointer; text-align:center; display:block; margin-left:20px;}
+		
+		.vscroller .scroller ul{ position:relative; padding:0; margin:0;}
+		.vscroller .scroller ul li{ list-style:none; <width></width>:100px; height:20px; background-color:#999; margin-bottom:2px; text-align:center;}
+		.vscroller .scroller ul li.on{ background-color:#333;}
+		
+		
+		/******水平滚动样式*****/	
+    .hscroller{ width:420px; height:30px; position:relative;				 	left:500px; top:100px;}		
+		
+		.hscroller .scroller{ position:relative; width:304px; height:20px; overflow:hidden; float:left;  margin-left:5px; margin-right:5px;}
+		.hscroller .pre { width:50px; height:20px;  background-color:#000; cursor:pointer; text-align:center; float:left; display:block;}
+		.hscroller .next{ width:50px; height:20px;  background-color:#000; cursor:pointer; text-align:center; float:left; display:block;}
+			
+		.hscroller .scroller ul{ position:relative; margin:0; padding:0; width:1000px;  height:20px;}
+		.hscroller .scroller ul li{ float:left; list-style:none; width:100px; height:20px; background-color:#999; margin-right:2px; text-align:center}
+		.hscroller .scroller ul li.on{ background-color:#333;}
+		
+		
+		
+		/**右侧广告栏*/
+	
+    </style>
+</head>
+
+<body>
+
+	<!--测试DIV-->
+  <div style="position:absolute; width:100%; height:2000px; left:0px; top:0px;"></div>
+      
+  <!--	右侧广告栏容器	-->
+	<div id="box" style="position:absolute; right:0px; top:10px; width:150px; height:350px; background-color:#69F;"></div>
+      
+   
+   
+   
+     
+	<div id="vbox" class="vscroller">
+    	<span class="pre"></span>
+    	<div class="scroller">
+            <ul>
+                <li class="on">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+            </ul>
+        </div>
+        <span class="next"></span>
+    </div>
+    
+    <div id="hbox" class="hscroller">
+   		<span class="pre"></span>
+    	<div class="scroller">
+            <ul>
+                <li class="on">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+            </ul>
+        </div>
+        <span class="next"></span>
+    </div>
+    
+    
+     <script type="text/javascript" src="js/jquery1.7.1.min.js"></script>
+     <script type="text/javascript" src="js/scrollarea.z.min.js"></script>    
+     <script type="text/javascript">
+		 
+				$("#vbox").addScroller({dir:'v',step:0,tweenTime:500,autoBack:true,callback:function(index,$elem){
+						//console.log(index);
+				}});
+				
+				$("#hbox").addScroller({dir:'h',step:0,autoBack:true,tweenTime:500});
+		
+    </script>
+    
+    
+    <script type="text/javascript">
+    
+				$("#box").addAdver({startPoint:20});
+			
+    </script>
+
+</body>
+</html>

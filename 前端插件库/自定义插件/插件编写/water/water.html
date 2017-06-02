@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>snap1</title>
+	<style type="text/css">
+		
+		.reset {
+			fill:rgba(0,0,255,0);
+			stroke-width:1; 
+			stroke:hsl(360,100%,50%);
+		}
+	</style>
+</head>
+<body>
+	<button id="begin" onclick="snap.startAnimate()">开始</button>
+	<button id="stop" onclick="snap.reset()">重置</button>
+	<button id="stop" onclick="snap.stopAimate()">停止</button>
+	<svg id="snap" width="150" height="200"    viewBox="0,0,200,100" version="1.1"  xmlns="http://www.w3.org/2000/svg" ></svg>
+	<svg id="snap2" width="150" height="200"    viewBox="0,0,200,100" version="1.1"  xmlns="http://www.w3.org/2000/svg" ></svg>
+	<script type="text/javascript" src="scripts/snap.svg.js"></script>
+	<script type="text/javascript" src="scripts/water.js"></script>
+</body>
+</html>

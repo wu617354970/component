@@ -1,0 +1,102 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+ <html xmlns = "http://www.w3.org/1999/xhtml" >
+	 <head >
+	 <meta http - equiv = "Content-Type" content = "text/html; charset=utf-8" /  >
+	 <title > Tween </title >
+	 </head >
+	 <body >
+	
+	 <div id = "div1" style = "position:absolute; border:1px solid #00F; background-color:#666; width:100px; height:100px; left:100px; top:50px;" >
+	 <div>
+	
+	 </div></div></body >
+	
+	 <script type = "text/javascript" >	
+		//动画计算缓动函数
+		function linear(t, b, c, d) { return c * t / d + b; }
+		
+		//动画函数
+		function Tween(target, duration, prop, start, end, callback) {
+			if (target.timer) {	clearInterval(target.timer) };
+			target.timer = setInterval(doMove, 13);
+			
+			var startTime = new Date().getTime() / 1000;
+			function doMove() {
+				var time = (new Date().getTime()) / 1000 - startTime;
+				if (time >= duration) {
+					clearInterval(target.timer);
+					target.timer = null;
+					if (callback != null) {
+						callback();
+					}
+					
+					time = duration;
+				}
+				var val = linear(time, start, end - start, duration);
+				switch (prop) {
+				case 'scrollTop':
+				case 'scrollLeft':
+					target[prop] = parseInt(val);
+					break;
+				default:
+					target.style[prop] = parseInt(val) + 'px';
+					break;
+				}
+			}
+		}
+ 	</script>
+    <script type="text/javascript">
+		Tween(document.getElementById('div1'),0.5,'left',0,500,null);
+    </script>
+    
+
+ 	<script type = "text/javascript" >
+		(function () {
+			//根据ID获取元素
+			var $$ = function (id) { return (typeof id == 'string') ? document.getElementById(id) : id; }
+			
+			//获取元素的样式
+			var getStyle = function (target, attr) { return target.currentStyle ? target.currentStyle[attr] : getComputedStyle(target, false)[attr]; }
+			
+			//Tween函数
+			var TweenEasy = function ($target, $vars, $onComplete) {
+				var target = $target;
+				var vars = $vars;
+				var onComplete = $onComplete;
+				
+				if (target.timer) {	clearInterval(target.timer); }
+				target.timer = setInterval(function () { doMove(); }, 30);
+			
+				function doMove() {
+					var step = 0,attr = '',isStop = true;
+					for (attr in vars) {
+						step = (attr == 'opacity') ? parseInt(getStyle(target, 'opacity') * 100) : step = parseInt(getStyle(target, attr));
+						if (isNaN(step)) { step = 0;}
+						
+						var speed = (vars[attr] - step) * 0.2;
+						speed = (speed > 0) ? Math.ceil(speed) : Math.floor(speed);
+						if (parseInt(vars[attr]) != step) {
+							isStop = false;
+						}
+						if (attr == 'opacity') {
+							target.style.filter = "alpha(opacity:" + (step + speed) + ")";
+							target.style.opacity = (step + speed) * 0.01;
+						} else {
+							target.style[attr] = (attr == 'zIndex') ? step + speed : step + speed + 'px';
+						}
+						if (isStop) {
+							clearInterval(target.timer);
+							target.timer = null;
+							if (onComplete) {
+								onComplete();
+							}
+							return;
+						}
+					}
+				}
+			};
+			
+			window.TweenEasy = TweenEasy;
+		})();
+	 </script>
+</html>

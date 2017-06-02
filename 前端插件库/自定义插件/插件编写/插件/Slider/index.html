@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+	<style type="text/css">
+		
+		body{ margin:0; padding:0;}
+	
+    .hslider{ position:relative; left:100px; top:100px;}		
+		.htrack{position:relative; width:200px; height:10px; background-color:#999; margin:3px;}
+		.hthumb{ position:absolute; width:10px; height:10px; background-color:#903; cursor:pointer;}
+		
+		
+		.vslider{ position:relative; left:100px; top:150px;}		
+		.vtrack{position:relative; width:10px; height:200px; background-color:#999; margin:3px;}
+		.vthumb{ position:absolute; width:20px; height:10px; background-color:#903; cursor:pointer; margin-left:-5px;}
+    </style>
+</head>
+
+<body>
+		<div id="hslider" class="hslider">
+        <div id="htrack" class="htrack">
+            <div id="hthumb" class="hthumb"></div>
+        </div>
+    </div>
+    
+    <div id="vslider" class="vslider">
+        <div id="vtrack" class="vtrack">
+            <div id="vthumb" class="vthumb"></div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="js/slider.z.js"></script>
+    <script type="text/javascript">
+		
+			/**
+			*	track					滑动轨道
+			*	thumb					滑块
+			*	dir						方向 垂直v 水平h
+			*	onDrag				添加拖拽回调函数
+			*/
+			
+			
+			//水平
+			var hSlider = YM.addSlider({
+				track : 'htrack',
+				thumb : 'hthumb',
+				dir : 'h',
+				onDrag : function(pos){
+					//console.log(hSlider.getPosition(),'___' + hSlider.getPercent());
+				}		
+			});
+			
+			
+			//垂直
+			YM.addSlider({
+				track : 'vtrack',
+				thumb : 'vthumb',
+				dir : 'v'			
+			});
+		
+    </script>
+</body>
+</html>

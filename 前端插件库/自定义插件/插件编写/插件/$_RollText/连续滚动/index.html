@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+	<style type="text/css">
+		body{ margin:0; padding:0;}
+		
+		/**垂直滚动样式*/
+		.vScrollText{overflow:hidden; width:200px; height:100px;}
+		.vScrollText div{ margin:0px; padding:0px;}
+		.vScrollText ul{ margin:0; padding:0;}
+		.vScrollText li{margin:0; padding:0;height:20px; list-style:none;}
+		
+		
+		/**水平滚动样式*/
+  	 	.hScrollText{overflow: hidden; width:200px;height:100px;}
+		.hScrollText div{ margin:0px; padding:0px;}
+		.hScrollText ul{ margin:0; padding:0;}
+		.hScrollText li{margin:0; padding:0;height:20px; list-style:none;;}
+		/*2*/
+		.hScrollText1 { width:200px;height:100px;overflow: hidden;margin:50px;border:1px dotted red;}
+		.hScrollText1 ul{ margin:0; padding:0;}
+		.hScrollText1 li{margin:0; padding:0;line-height:20px;width:200px; list-style:none;;}
+    </style>
+</head>
+
+<body>
+    <div id="vScrollText" class="vScrollText">
+        <div>
+            <ul>
+                <li>----1111111111111111</li>
+                <li>2222222222222222</li>
+                <li>3333333333333333</li>
+                <li>4444444444444444</li>
+                <li>5555555555555555</li>
+                <li>6666666666666666</li>
+                <li>7777777777777777</li>
+                <li>8888888888888888</li>
+                <li>9999999999999999</li>
+                <li>1010101010101010</li>
+                <li>1111111111111111</li>
+                <li>1212121212121212</li>
+                <li>1313131313131313</li>
+                <li>1414141414141414</li>
+                <li>1515151515151515-----</li>
+            </ul>
+          </div>
+          <div></div>
+    </div>
+  
+    <div id="hScrollText" class="hScrollText">
+    	<div>
+            <ul>
+                <li>====1111111111111111</li>
+                <li>2222222222222222</li>
+                <li>3333333333333333</li>
+                <li>4444444444444444</li>
+                <li>5555555555555555</li>
+                <li>6666666666666666</li>
+                <li>7777777777777777</li>
+                <li>8888888888888888</li>
+                <li>9999999999999999</li>
+                <li>1010101010101010</li>
+                <li>1111111111111111</li>
+                <li>1212121212121212</li>
+                <li>1313131313131313</li>
+                <li>1414141414141414</li>
+                <li>1515151515151515=====</li>
+            </ul>
+        </div>
+        <div></div>
+    </div>
+	
+	<div id="hScrollText2" class="hScrollText1">
+		<ul>
+			<li>====<11111111111111111111111111111111111</br></111111111111111111111111111111111111111111111111111111</li>
+			<li>2222222222222222</li>
+			<li>3333333333333333</li>
+			<li>4444444444444444</li>
+			<li>5555555555555555</li>
+			<li>6666666666666666</li>
+			<li>7777777777777777</li>
+			<li>8888888888888888</li>
+			<li>9999999999999999</li>
+			<li>1010101010101010</li>
+			<li>1111111111111111</li>
+			<li>1212121212121212</li>
+			<li>1313131313131313</li>
+			<li>1414141414141414</li>
+			<li>1515151515151515=====</li>
+		</ul>
+    </div>
+    
+    
+  <script type="text/javascript" src="js/jquery1.7.1.min.js"></script>      
+    <script type="text/javascript" src="js/looptext.z.js"></script>
+  	<script type="text/javascript">
+	
+    	YM.addLoopText({box:"vScrollText",direction:"top"});	
+		YM.addLoopText({box:"hScrollText",direction:"bottom"});
+		$(".hScrollText1").addRollText({dir:"v",delay:30});
+    </script>
+</body>
+</html>

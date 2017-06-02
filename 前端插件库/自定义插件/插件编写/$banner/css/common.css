@@ -1,0 +1,259 @@
+@charset "utf-8";
+/*css document*/
+
+/************************************
+ *	Version 		14.0.1
+ *	Author			wuwg
+ *  CreateTime      14.07.10
+ *	UpdateTime		14.07.14
+ **************************************/
+ 
+ .contain {
+		min-width:1002px;
+		width:100%;
+		height:100%;
+		background-color:#fff;
+	}
+.main {
+		margin:0 auto;
+		padding:20px 0;
+		width:1002px;	
+	}	
+.h2_18_m {
+		padding:15px 0px;
+		color:#333;
+		text-align:center;
+		font:700 18px/30px "Microsoft YaHei";
+	}
+.h3_16_m {
+		padding-bottom:10px;
+		color:#333;
+		text-align:center;
+		font:700 16px/30px "Microsoft YaHei";
+	}	
+.p_info {
+		color:#999;
+		text-align:center;
+		font:12px/26px SimSun;
+	}	
+/*---------------------------------- full  screen  banner---------------------------------*/
+.full_screen {
+		width:100%;
+		overflow:hidden;
+		z-index:1;
+	}	
+.js_fullscreen_banner {
+		position:relative;
+		width:100%;
+		height:400px;
+		overflow:hidden;
+	}	
+.js_fullscreen_banner .d_btn {
+		position:absolute;
+		top:0;
+		left:0;
+		width:1172px;
+		height:0px;
+		z-index:9999;
+	}
+.js_fullscreen_banner .d_btn .sp_pre,
+.js_fullscreen_banner .d_btn .sp_next {
+		position:absolute;
+		display:block;
+		float:left;
+		top:174px;
+		width:77px;
+		height:77px;
+		line-height:0;
+		font-size:0;
+		text-indent:-9999em;
+		cursor:pointer;
+		background:url(../images/icon_banner.png) 0 0 no-repeat;
+	}	
+.js_fullscreen_banner .d_btn .sp_pre {
+		left:0;
+		background-position:0 -78px;
+	}	
+.js_fullscreen_banner .d_btn .sp_next {
+		right:0;
+		background-position:0 0;
+	}	
+.js_fullscreen_banner .con  {
+		width:100%;
+		height:400px;
+	}	
+.js_fullscreen_banner .con  li{
+		width:100%;
+		height:400px;
+		text-align:center;
+	}
+.js_fullscreen_banner .con  .li_01 {
+		background-color:#2995ed;
+	}	
+.js_fullscreen_banner  .index {
+		position:absolute;
+		bottom:0;
+		left:0;
+		z-index:9999;
+		padding:10px 0;
+		width:100%;
+		text-align:center;
+	}	
+.js_fullscreen_banner  .index  li {
+		display:inline;
+		padding:0 5px;
+		vertical-align:top;
+		line-height:18px;
+	}
+.js_fullscreen_banner  .index a {
+		vertical-align:top;
+		display:inline-block;
+		width:18px;
+		height:18px;
+		background: url(../images/icon_banner.png) 0 -157px no-repeat;
+		_background: url(../images/circle.gif) 0 0 no-repeat;
+	}	
+.js_fullscreen_banner  .index .on a {
+		background-position:0 -195px;
+		_background-position:0 -38px;
+	}		
+/*---------------*/	
+.table_contain {
+		width:100%;
+	}	
+.table_contain td {
+		padding:10px ;
+	}
+/*----------------------------------------- theme   banner ----------------------------------*/	
+
+
+.js_banner_warp {
+		width:450px;
+		height:350px;
+		overflow:hidden;
+	}
+.js_banner {
+		width:450px;
+		height:350px;
+		overflow:hidden;
+	}	
+	
+/*------------------------          horizontal   ----------------------------*/	
+.js_banner  {
+		position:relative;
+		
+	}
+.d_btn {
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:0px;
+		line-height:0;
+		font-size:0;
+		text-indent:-9999em;
+		z-index:99999;
+	}
+.js_banner  .sp_pre ,
+.js_banner  .sp_next{
+		position:absolute;
+		top:145px;
+		width:60px;
+		height:60px;
+		line-height:0;
+		font-size:0;
+		text-indent:-9999em;
+		cursor:pointer;
+	}	
+.js_banner  .sp_pre  {
+		left:10px;
+		background: url(../images/left.png) 0 0 no-repeat;
+	}	
+.js_banner  .sp_next {
+		right:10px;
+		background: url(../images/right.png) 0 0 no-repeat;
+	}	
+.js_banner .con  li,
+.js_banner .con  li  img {
+		width:450px;
+		height:350px;
+		overflow:hidden;
+	}	
+
+.js_banner  .index {
+		position:absolute;
+		bottom:0;
+		left:0;
+		z-index:9999;
+		padding:10px 0;
+		width:100%;
+		text-align:center;
+	}	
+.js_banner  .index  li {
+		display:inline;
+		padding:0 5px;
+		vertical-align:top;
+		line-height:18px;
+	}
+.js_banner  .index a {
+		vertical-align:top;
+		display:inline-block;
+		width:18px;
+		height:18px;
+		font-size:0;
+		line-height:0;
+		background: url(../images/icon_banner.png) 0 -157px no-repeat;
+	}	
+.js_banner  .index .on a {
+		background-position:0 -195px;
+	}	
+	
+/*------------------------          vertical    ----------------------------*/		
+.js_banner_vertical   .sp_pre ,
+.js_banner_vertical  .sp_next {
+		position:absolute;
+		left:20px;
+		width:60px;
+		height:60px;
+		line-height:0;
+		font-size:0;
+		text-indent:-9999em;
+		cursor:pointer;
+		background: url(../images/tb.png) 0 0 no-repeat;
+	}	
+.js_banner_vertical    .sp_pre  {
+		top:110px;
+		background-position:0 0;
+	}	
+.js_banner_vertical      .sp_next {
+		top:180px;
+		background-position:0 -60px;
+	}		
+.js_banner_vertical  .index {
+		position:absolute;
+		bottom:0;
+		left:410px;
+		z-index:9999;
+		padding:10px 0;
+		width:20px;
+		text-align:center;
+	}	
+.js_banner_vertical  .index  li {
+		float:left;
+		margin-bottom:2px;
+		padding:0 5px;
+		vertical-align:top;
+		line-height:18px;
+	}
+.js_banner_vertical  .index a {
+		vertical-align:top;
+		display:inline-block;
+		width:18px;
+		height:18px;
+		font-size:0;
+		line-height:0;
+		background: url(../images/icon_banner.png) 0 -157px no-repeat;
+	}	
+.js_banner_vertical  .index .on a {
+		background-position:0 -195px;
+	}		

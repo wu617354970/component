@@ -1,0 +1,82 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>progress</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css" media="all" />
+</head>
+<body>
+	<div class="fd_bar_contain  fd_mb20">
+		<div class="fd_progresss_bar"  data-total-count=2000   data-current-count=500  data-update-count=550>
+			<div class="fd_count_contain">
+				<span class="fd_get_count">120</span>
+				<em  class="fd_add_count">+6</em>
+			</div>
+			<!-- fd_count_contain end -->
+		</div>
+		<!-- fd_progresss_bar end -->
+		<img src="shine.png" class="fd_shine" alt="" id="asd" />
+	</div>
+	<!-- fd_bar_contain end -->
+	
+	<div class="fd_bar_contain">
+		<div class="fd_progresss_bar"  data-total-count=2000   data-current-count=200  data-update-count=200>
+			<div class="fd_count_contain">
+				<span class="fd_get_count">120</span>
+				<em  class="fd_add_count">+6</em>
+			</div>
+			<!-- fd_count_contain end -->
+		</div>
+		<!-- fd_progresss_bar end -->
+		<img src="shine.png" class="fd_shine" alt="" id="asd" />
+	</div>
+	<!-- fd_bar_contain end -->
+	
+	<div class="fd_bar_contain">
+		<div class="fd_progresss_bar"  data-total-count=2000   data-current-count=600  data-update-count=600>
+			<div class="fd_count_contain">
+				<span class="fd_get_count">120</span>
+				<em  class="fd_add_count">+6</em>
+			</div>
+			<!-- fd_count_contain end -->
+		</div>
+		<!-- fd_progresss_bar end -->
+		<img src="shine.png" class="fd_shine" alt="" id="asd" />
+	</div>
+	<!-- fd_bar_contain end -->
+	<script type="text/javascript" src="scripts/jQuery.v1.11.1.min.js"></script>
+	<script type="text/javascript" src="scripts/jQuery.Easing.v1.3.js"></script>
+	<script type="text/javascript" src="scripts/shine.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//测试数据，改变data-update-count 的数字即可
+			var i=0;
+			var  _count1=$(".fd_progresss_bar").eq(0).data("updateCount");
+			var  _count2=$(".fd_progresss_bar").eq(1).data("updateCount");
+			var  _count3=$(".fd_progresss_bar").eq(2).data("updateCount");
+				setInterval(function(){
+					_count1+=20+i;
+					_count2+=30+i;
+					_count3+=40+i;
+					i++;
+					$(".fd_progresss_bar").eq(0).data("updateCount",_count1);
+					$(".fd_progresss_bar").eq(1).data("updateCount",_count2);
+					$(".fd_progresss_bar").eq(2).data("updateCount",_count3);
+				},5000);
+				
+			//方法调用	
+			$(".fd_bar_contain").addShine({
+				totalCount : 5000, 					// 总数 ,必须,可以单位写在 data-total-count中 如 data-total-count=2000   
+				tweetime:1000, 						//  缓动时间
+				progresssBar : ".fd_progresss_bar",  // 进度条容器
+				shine : ".fd_shine",				// 光容器
+				getCount : ".fd_get_count",			// 获得数的容器
+				getAddCount : ".fd_add_count",		// 获得增加数的容器
+				callBack:function(){
+					//alert("完成")
+				}	
+			});	
+		});
+	</script>
+</body>
+</html>

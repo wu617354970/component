@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>数据增长滚动插件</title>
+	<link rel="stylesheet" href="css/odometer-theme-car.css" />
+</head>
+<body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/odometer.js"></script>
+	<div class="odometer">3252</div>
+		<script>
+		  setTimeout(function(){
+		   // $('.odometer').html(20);
+		  }, 1000);
+		  
+		  var el = document.querySelector('.odometer');
+				od = new Odometer({
+					el: el,
+					value: 0,
+				  // Any option (other than auto and selector) can be passed in here
+				 // format: '0',
+				  //theme: 'digital'
+				});
+			 $('.odometer').html(9);	
+		 setTimeout(function(){
+			//od.update(15)
+		  }, 5000);
+			
+			
+		
+				// or
+				//el.innerHTML = 555
+		</script>
+
+	
+</body>
+</html>

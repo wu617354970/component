@@ -1,0 +1,164 @@
+@charset utf-8;
+/* CSSTidy 1.3: Mon, 04 Jul 2016 00:46:21 +0800 */
+/****************************************
+*version			16.00.01
+*Author    		    wuwg
+*CreateTime 		2016-06-29
+*upDateTime 		2016-07-22
+*****************************************/*{padding:0;margin:0;word-wrap:break-word;word-break:break-all;}
+ol,ul{list-style:none;}
+a{text-decoration:none;cursor:pointer;}
+a:focus{outline-style:none;}
+a:hover{text-decoration:underline;}
+html {font-size:16px;}
+.fd-tree-max-box{position:absolute;top:0;left:0;z-index:2;width:6rem;height:100%;box-sizing:border-box;}
+.fd-tree-max-box{padding:46px .55555555555556rem .66666666666667rem;width:18.888888888889rem;z-index:2;}
+.fd-tree-search-wrap{position:absolute;top:6px;left:0;z-index:6;padding:0 10px;width:100%;height:30px;box-sizing:border-box;}
+h1 {margin-bottom:20px;text-align:center;font:20px/60px "Microsoft YaHei";border-bottom:1px solid #ddd;}
+.fd-frame-aside { position:relative;margin-left:20px;width:19rem;height:500px;border:1px solid #ddd;}
+.fd-frame-aside .fd-scroll-bar{opacity:0;transition:opacity .2s 0s linear;}
+.fd-frame-aside:hover .fd-scroll-bar{opacity:1;}
+/**************************************************************************************************************************************
+*name     		theme   ——————————————————  fd-nav
+*status    		start
+*CreatTime 		2016-06-29
+**************************************************************************************************************************************/
+.fd-tree-contain{position:relative;z-index:1;height:100%;overflow:hidden;}
+.fd-scroll-track{position:absolute;top:1%;right:3px;z-index:2;width:6px;height:98%;background-color:rgba(0,0,0,0.01);}
+.fd-scroll-bar{position:absolute;top:0;left:0;z-index:2;width:100%;height:80px;border-radius:10px;cursor:default;background-color:rgba(33,112,177,.8);}
+.fd-scroll-bar:hover,.fd-scroll-bar.pressed{background-color:rgba(33,112,177,1);}
+/******************************************************************************************************************************\
+
+                                             fd-search-contain
+
+\******************************************************************************************************************************/
+.fd-tree-search-contain .fd-search-menu{position:relative;padding-left:0;width:auto;height:auto;font-size:initial;line-height:initial;font-family:"Microsoft YaHei";box-sizing:border-box;border-radius:0;background-color:#0b73c5;border:none;box-shadow:none;color:#fff;}
+.fd-tree-search-contain{position:relative;padding-left:5px;padding-right:3.6rem;width:100%;height:30px;z-index:2;box-sizing:border-box;border:solid 1px #8cb6d6;background:#fff;}
+.fd-tree-search-contain .fd-input-search{width:100%;height:100%;line-height:28px;box-sizing:border-box;border:none;border:0;color:#333;font:14px/28px "Microsoft YaHei";background-color:transparent;}
+.fd-tree-search-contain .fd-btn-search{position:absolute;top:0;right:0;z-index:3;text-align:center;width:3.6rem;height:28px;border:none;border:0;color:#fff;text-align:center;cursor:pointer;font:14px/28px "Microsoft YaHei";background-color:#69c;}
+.fd-tree-search-contain .fd-btn-search:hover{background-color:#5e9bd8;}
+.fd-tree-search-contain .fd-menu-contain{clear:both;position:relative;z-index:2;width:100%;height:0;}
+.fd-tree-search-contain .fd-menu-contain .fd-search-menu,.fd-tree-search-contain .fd-menu-contain .fd-empty-contain{position:absolute;top:1px;left:-5px;right:-3.6rem;z-index:2;background-color:#fff;border:1px solid #ddd;border-top:none;max-height:300px;overflow:auto;color:#333;font:14px/30px "Microsoft Yahei";}
+.fd-tree-search-contain .fd-menu-contain .fd-empty-contain{color:#999;text-indent:10px;}
+.fd-tree-search-contain .fd-menu-contain ul li{padding:0 10px;clear:both;color:#333;font:14px/30px "Microsoft Yahei";white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;border-bottom:1px solid #eee;}
+/**强调字**/.fd-tree-search-contain .fd-menu-contain ul li em{color:#f60;}
+.fd-tree-search-contain .fd-menu-contain ul li:hover{background-color:#f5f5f5;}
+.fd-tree-search-contain .fd-menu-contain ul li.selected,.fd-search-contain .fd-menu-contain ul li.selected:hover{background-color:#ffebbf;}
+.fd-tree-search-contain .fd-menu-contain.hide{display:none;}
+/******************************************************************************************************************************\
+
+                                                 fd-nav-tree-default
+
+\******************************************************************************************************************************/
+.fd-nav-tree-default{position:relative;width:100%;box-sizing:border-box;}
+.fd-nav-tree-default .tree-hd{position:relative;padding-left:30px;height:30px;color:#354052;font:14px/30px "Microsoft Yahei";/*cursor:pointer;*/overflow:hidden;}
+/*** warning ***/
+.fd-nav-tree-default .tree-hd-warning{background-color:#ffebbf;}
+/***hover ***/
+.fd-nav-tree-default .tree-hd-hover{background-color:#f5f5f5;}
+/***selected ***/
+.fd-nav-tree-default .tree-hd-selected{background-color:#e1f1ff;}
+/***a***/
+.fd-nav-tree-default .tree-hd a{cursor:pointer;color:#354052;max-width:100%;float:left;overflow:hidden;text-overflow:ellipsis;text-decoration:none;white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.fd-nav-tree-default .tree-hd a:hover{text-decoration:none;}
+/*** trigger***/
+.fd-nav-tree-default .tree-hd .fd-trigger{position:absolute;left:30px;top:50%;z-index:999;margin-left:-25px;margin-top:-10px;width:21px;height:21px;cursor:pointer;background:url(../images/tree/trigger.gif) 0 0 no-repeat;}
+.fd-nav-tree-default .tree-hd .fd-trigger.hide{display:none;}
+.fd-nav-tree-default .tree-hd-collapse .fd-trigger{background-position:0 -22px;}
+.fd-nav-tree-default.arrow .tree-hd .fd-trigger{background-image:url(../images/tree/trigger-arrow.png);}
+.fd-nav-tree-default.blue .tree-hd .fd-trigger{background-image:url(../images/tree/trigger-blue.gif);}
+/*--------  first  level  --------  plus 12px*/
+.fd-nav-tree-default .tree-hd-01{padding-left:21px;}
+.fd-nav-tree-default .tree-hd-01 .fd-trigger{left:21px;}
+/*--------  second  level   +20px--------*/
+.fd-nav-tree-default .tree-hd-02{padding-left:41px;}
+.fd-nav-tree-default .tree-hd-02 .fd-trigger{left:41px;}
+/*--------  third  level  --------*/
+.fd-nav-tree-default .tree-hd-03{padding-left:61px;}
+.fd-nav-tree-default .tree-hd-03 .fd-trigger{left:61px;}
+/*--------  fouth  level  --------*/
+.fd-nav-tree-default .tree-hd-04{padding-left:81px;}
+.fd-nav-tree-default .tree-hd-04 .fd-trigger{left:81px;}
+/*--------  fifth  level  --------*/
+.fd-nav-tree-default .tree-hd-05{padding-left:101px;}
+.fd-nav-tree-default .tree-hd-05 .fd-trigger{left:101px;}
+/*--------  sixth  level  --------*/
+.fd-nav-tree-default .tree-hd-06{padding-left:127px;}
+.fd-nav-tree-default .tree-hd-06 .fd-trigger{left:127px;}
+.fd-nav-tree-default .fd-tree-last-layer a{color:#065fab;}
+/**********icon ************/
+.fd-nav-tree-default .fd-icon-img{float:left;margin-top:5px;width:20px;height:20px;}
+.fd-nav-tree-default .fd-icon-img-01{margin-right:2px;}
+.fd-nav-tree-default .fd-icon-img-02{margin-right:5px;}
+.fd-nav-tree-default .fd-icon-img-03{margin-left:6px;margin-right:5px;}
+/*多项选择框*/
+.fd-nav-tree-default input[type=checkbox]{float:left;width:14px;height:14px;margin-right:5px;margin-top:9px;font:14px/1em "Microsoft YaHei";}
+.fd-nav-tree-default .tree-hd .fd-icon{float:left;width:16px;height:16px;margin-right:5px;margin-top:8px;font:0/0 "Microsoft YaHei";background:url(../images/tree/icon-level-01.png) center center no-repeat;}
+.fd-nav-tree-default .tree-hd-01 .fd-icon{background-image:url(../images/tree/fyjb-01.png);}
+.fd-nav-tree-default .tree-hd.disabled .fd-trigger{display:none;}
+.fd-nav-tree-default [canselected=false] a{cursor:default;}
+/*tingshi*/
+.fd-nav-tree-default .tree-ts-0 a,.fd-nav-tree-default .tree-ts-1 a{font-size:12px;cursor:default;color:#7a8e9d;}
+.fd-nav-tree-default .tree-ts-0 .fd-icon{background-image:url(../images/tree/tree-tingshi.png);}
+.fd-nav-tree-default .tree-ts-1 .fd-icon{background-image:url(../images/tree/tree-renyuan.png);}
+/**blue***/
+.fd-nav-tree-default.blue .tree-hd-01{padding-left:5px;}
+.fd-nav-tree-default.blue .tree-hd-01 .fd-trigger{left:5px;}
+.fd-nav-tree-default.blue .tree-hd{border-bottom:1px solid #fff;background-color:#d6edfd;}
+.fd-nav-tree-default.blue .ul-tree-ct{background-color:#f0f6fc;}
+/**庭审的**/
+.fd-nav-tree-default.blue .tree-ts-0{background-color:#f0f6fc;}
+.fd-nav-tree-default.blue .tree-ts-1{background-color:#fff;}
+/*** warning ***/
+.fd-nav-tree-default.blue .tree-hd-warning{background-color:#ffe8d6;}
+/***hover ***/
+.fd-nav-tree-default.blue .tree-hd-hover{background-color:#72b6f9;}
+/***selected ***/
+.fd-nav-tree-default.blue .tree-hd-selected{background-color:#f1bf98;}
+.fd-tree-contain-min{margin-left:.2rem;margin-top:1%;padding-right:10px;width:5rem;height:98%;}
+.fd-tree-contain-min .fd-nav-tree-default.blue .tree-hd{padding-left:10px;border-radius:3px;}
+/******************************************************************************************************************************\
+
+                                                 fd-nav-tree-line
+
+\******************************************************************************************************************************/
+.fd-nav-tree-line{margin-left:20px;position:relative;box-sizing:border-box;background:url(../images/tree/tree-line-v.gif) 4px 0 repeat-y;}
+.fd-nav-tree-line,.ul-tree-ct{zoom:1;}
+.fd-nav-tree-line:after,.ul-tree-ct:after{content:"";display:block;clear:both;}
+.fd-nav-tree-line .tree-item{float:left;width:100%;overflow:hidden;}
+/***********************************\
+             ul-tree-ct
+\***********************************/
+.fd-nav-tree-line .ul-tree-ct{padding-left:18px;background:url(../images/tree/tree-line-v.gif) 22px 0 repeat-y;}
+/*--------  first  level  需要特殊处理 --------*/
+.fd-nav-tree-line .ul-tree-ct-01{padding-left:0;background-position:4px 0;}
+/***********************************\
+            tree-hd
+\***********************************/
+.fd-nav-tree-line .tree-hd{position:relative;padding-left:31px;color:#000;height:30px;overflow:hidden;font:14px/30px "Microsoft Yahei";background:url(../images/tree/tree-line-conner.gif) 0 0 no-repeat;}
+.fd-nav-tree-line .tree-hd-01{background-image:url(../images/tree/tree-line-conner-01.gif);}
+/*root*//*** warning ***/
+.fd-nav-tree-line .tree-hd-warning{background-color:transparent;}
+/*****hover *****/
+.fd-nav-tree-line .tree-hd-hover{background-color:transparent;}
+/*****selected *****/
+.fd-nav-tree-line .tree-hd-selected{background-color:transparent;}
+/*****trigger  *****/
+.fd-nav-tree-line .tree-hd .fd-trigger{position:absolute;left:31px;top:50%;z-index:999;margin-left:-13px;margin-top:-14px;width:13px;height:30px;cursor:pointer;background:url(../images/tree/trigger-line.gif) 0 -31px no-repeat;}
+.fd-nav-tree-line .tree-hd-collapse .fd-trigger{background-position:0 0;}
+/*--------  first  level  --------   */
+.fd-nav-tree-line .tree-hd-01{padding-left:13px;}
+.fd-nav-tree-line .tree-hd-01 .fd-trigger{left:13px;}
+/*****normal  a *****/
+.fd-nav-tree-line .tree-hd a{float:left;margin-top:4px;padding:0 5px;max-width:100%;box-sizing:border-box;line-height:22px;color:#000;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid transparent;}
+.fd-nav-tree-line .tree-hd a:hover{text-decoration:none;background-color:#f5f5f5;border-color:#ddd;}
+/*****warning   a *****/
+.fd-nav-tree-line .tree-hd-warning a{background-color:#ffebbf;border-color:#ffc773;}
+/*****selected  a *****/
+.fd-nav-tree-line .tree-hd-selected a:hover,.fd-nav-tree-line .tree-hd-selected a{background-color:#e1f1ff;border-color:#2c9dff;}
+/*****fd-last-hd***/
+.fd-nav-tree-line .tree-item-last{background-color:#fff;}
+.fd-nav-tree-line .tree-hd .fd-trigger.hide{background-position:0 -62px;}
+/*多项选择框*/
+.fd-nav-tree-line input[type=checkbox]{float:left;width:14px;height:14px;margin-right:5px;margin-top:4px;font:14px/1em "Microsoft YaHei";}
+.fd-nav-tree-line .tree-hd .fd-icon{float:left;width:16px;height:16px;margin-right:5px;margin-top:3px;font:0/0 "Microsoft YaHei";background:url(../images/tree/icon-level-01.png) center center no-repeat;}

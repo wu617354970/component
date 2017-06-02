@@ -1,0 +1,97 @@
+{
+  "success":true,
+  "message":"请求成功",
+  "result":[{
+      "fbdm" : "000Z",
+      "fydm" : "0",
+      "fyjb" : "1",
+      "fyjc" : "最高",
+      "isXq" : "false",
+      "mapId" : "990000",
+      "xqmc" : "最高人民法院"
+    }, {
+        "fbdm" : "010Z",
+        "fydm" : "1",
+        "fyjb" : "2",
+        "fyjc" : "北京高院",
+        "isXq" : "false",
+        "mapId" : "119900",
+        "xqmc" : "北京市高级人民法院"
+      },{
+          "fbdm" : "011Z",
+          "fydm" : "2",
+          "fyjb" : "3",
+          "fyjc" : "北京一中院",
+          "isXq" : "false",
+          "mapId" : "110199",
+          "xqmc" : "北京市第一中级人民法院"
+        },
+        {
+        "fbdm" : "0113",
+        "fydm" : "5",
+        "fyjb" : "4",
+        "fyjc" : "石景山法院",
+        "isXq" : "false",
+        "mapId" : "110103",
+        "xqmc" : "北京市石景山区人民法院"
+       }, {
+        "fbdm" : "0114",
+        "fydm" : "6",
+        "fyjb" : "4",
+        "fyjc" : "海淀法院",
+        "isXq" : "false",
+        "mapId" : "110104",
+        "xqmc" : "北京市海淀区人民法院"
+       }, {
+        "fbdm" : "0115",
+        "fydm" : "7",
+        "fyjb" : "4",
+        "fyjc" : "门头沟法院",
+        "isXq" : "false",
+        "mapId" : "110105",
+        "xqmc" : "北京市门头沟区人民法院"
+      },
+     {
+        "fbdm" : "013Z",
+        "fydm" : "22",
+        "fyjb" : "3",
+        "fyjc" : "北京四中院",
+        "isXq" : "false",
+        "mapId" : "110399",
+        "xqmc" : "北京市第四中级人民法院"
+      }, {
+        "fbdm" : "0131",
+        "fydm" : "23",
+        "fyjb" : "4",
+        "fyjc" : "铁路法院",
+        "isXq" : "false",
+        "mapId" : "110301",
+        "xqmc" : "北京铁路运输法院"
+      },
+      {
+      "fbdm" : "0130",
+      "fydm" : "22",
+      "fyjb" : "3",
+      "fyjc" : "北京四中院",
+      "isXq" : "true",
+      "mapId" : "110300",
+      "xqmc" : "北京市第四中级人民法院辖区"
+    }, {
+        "fbdm" : "014Z",
+        "fydm" : "29",
+        "fyjb" : "3",
+        "fyjc" : "三中院",
+        "isXq" : "false",
+        "mapId" : "110499",
+        "xqmc" : "北京市第三中级人民法院"
+      }, {
+        "fbdm" : "0141",
+        "fydm" : "15",
+        "fyjb" : "4",
+        "fyjc" : "朝阳法院",
+        "isXq" : "false",
+        "mapId" : "110401",
+        "xqmc" : "北京市朝阳区人民法院"
+      }
+  ]
+}

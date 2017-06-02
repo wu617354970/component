@@ -1,0 +1,207 @@
+/***
+* css
+* Time  			 2015-10-10
+* plugin Name  		 scrollPage
+* author              wuwg
+**/
+
+body {
+	 background-color: #f5f5f5;
+		
+}
+/******************************************
+
+				header
+
+******************************************/
+.fd_header_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+	height: 57px;
+    overflow: visible;
+    background-color: #0193de;
+    box-shadow: 0 0 10px 1px #9edeff;
+}
+.fd_header_in{
+    margin: 0 auto;
+	padding: 0 50px;
+	width: 1240px;
+    zoom: 1;
+}
+
+.fd_header_in .fd_logo {
+    float: left;
+    color: #fff;
+    font: 22px/57px "Microsoft YaHei";
+    text-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+.fd_header_in .fd_logo:hover {
+	text-decoration:none;
+}
+
+
+/******************************************
+
+				content
+
+******************************************/
+.fd_content_auto {
+	padding-top: 57px;
+    height: auto !important;
+	
+}
+.fd_content_article {
+	position: relative;
+    padding: 20px 0;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+   
+}
+.fd_content_article_contain {
+    position: relative;
+    margin: 0 auto;
+    padding-right: 205px;
+    width: 1340px;
+    height: 100%;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.fd_content_article_contain  .fd_section{	
+	width:100%;
+}
+
+.fd_content_article_contain .fd_h2_01 {
+    padding: 20px 0 0 50px;
+	  color: #666;
+    font: 24px/1.5em "Microsoft YaHei";
+}
+.fd_content_article_contain .fd_title_info {
+    padding: 0 50px 30px;
+    color: #353535;
+    font: 14px/2em "Microsoft YaHei";
+}
+.fd_dl_02 {
+}
+.dt_02 {
+    height: 30px;
+    color: #101010;
+    font: 28px/30px "Microsoft YaHei";
+}
+.dt_02 span {
+    float: left;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #519cea;
+}
+.dd_02 {
+    padding: 20px 50px;
+    color: #555;
+    font: 14px/30px "Microsoft YaHei";
+}
+.dd_02 p {
+    margin-bottom: 1em;
+    -webkit-user-select: text;
+    -webkit-user-select: element;
+}
+
+/***********fd_dl_fix_nav***********/
+.fd_dl_fix_nav {
+	position:fixed;
+	top:110px;
+	right:0;
+	z-index:999;
+	padding-bottom:140px;
+	width:180px;
+	height: auto;
+	background: url(../images/icon_line.png) 13px 0 /3px 3px repeat-y;
+	
+}
+.fd_dl_fix_nav:after {
+	position:absolute;
+	left:13px;
+	bottom:0;
+	width:14px;
+	height:14px;
+	content:"";
+	margin-left:-6px;
+	border:3px solid #aaa9a9;
+	box-sizing:border-box;
+	background-color:#fff;
+	border-radius:100%;
+} 
+.fd_dl_fix_nav  dt {
+	margin-left:7px;
+	margin-bottom:10px;
+	width:14px;
+	height:14px;
+	border:3px solid #aaa9a9;
+	box-sizing:border-box;
+	background-color:#fff;
+	border-radius:100%;
+}
+.fd_dl_fix_nav .fd_dd_item {
+	margin-bottom:6px;
+	height:20px;
+	color:#999;
+	cursor:pointer;
+	font:14px/20px "Microsoft YaHei";
+}
+.fd_dl_fix_nav .fd_dd_item  .fd_icon {
+	position:relative;
+	float:left;
+	margin-right:24px;
+	margin-top:3px;
+	margin-left:8px;
+	width:14px;
+	height:14px;
+	background-color:#fff;
+}
+.fd_dl_fix_nav .fd_dd_item  .fd_icon:after {
+	position:absolute;
+	top:50%;
+	left:50%;
+	z-index:2;
+	content:"";
+	width:8px;
+	height:8px;
+	margin:-4px 0 0 -4px;
+	border-radius:4px;
+	font:0/0 SimSun;
+	text-indent:-9999em;
+	background-color:#b8b7b7;
+}
+/************active ************/
+.fd_dl_fix_nav .fd_dd_item_active  .fd_icon:after {
+	position:absolute;
+	top:50%;
+	left:50%;
+	z-index:2;
+	content:"";
+	width:20px;
+	height:12px;
+	margin:-6px 0 0 -10px;
+	border-radius:0;
+	background: url(../images/icon_05.png) center center no-repeat;
+}
+
+/******************************************
+
+				footer
+
+******************************************/
+.fd_footer {
+	height: 28px;
+	text-align: center;
+    color: #fff;
+    font: 12px/28px "Microsoft YaHei";	
+	background-color: #0193de;	
+}

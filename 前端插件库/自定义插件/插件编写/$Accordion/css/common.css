@@ -1,0 +1,84 @@
+@charset "utf-8";
+/*css document*/
+
+/************************************
+ *	Version 		14.0.1
+ *	Author			wuwg
+ *  CreateTime      14.07.14
+ *	UpdateTime		14.07.14
+ **************************************/
+ 
+  .contain {
+		min-width:1002px;
+		width:100%;
+		height:100%;
+		background-color:#fff;
+	}
+.main {
+		margin:0 auto;
+		padding:20px 0;
+		width:1002px;	
+	}	
+.h2_18_m {
+		padding:15px 0px;
+		color:#333;
+		text-align:center;
+		font:700 18px/30px "Microsoft YaHei";
+	}
+.h3_16_m {
+		padding-bottom:10px;
+		color:#333;
+		text-align:center;
+		font:700 16px/30px "Microsoft YaHei";
+	}	
+.p_info {
+		color:#999;
+		text-align:center;
+		font:12px/26px SimSun;
+	}	
+.table_contain {
+		width:100%;
+	}	
+.table_contain td {
+		padding:20px;
+	}	
+/*--------------------------- accordion ---------------------------*/
+.accordion{ 
+		margin:0 auto;
+		padding:5px;
+		width:450px;
+		border:1px solid #ddd;
+	}
+.accordion_ul { 
+		position:relative;
+	}
+.accordion_ul  li{ 
+		width:450px; 
+		overflow:hidden;
+	}
+.accordion_ul .d_img ,
+.accordion_ul .d_img  img{
+		float:left;
+		clear:both;
+		width:450px;
+		height:300px;
+	}	
+.accordion_ul .d_img  {
+		display:none;
+	}	
+.accordion_ul  li  h3{ 
+		color:#333;
+		text-align:center;
+		cursor:pointer;
+		font:14px/30px "Microsoft YaHei";
+		background-color:#fff; 
+		border-bottom:1px dashed #ddd;
+	}
+.accordion_ul  li h3.last {
+		border-bottom-color:#fff;	
+	} 	 	
+.accordion_ul li  h3.on{ 
+		color:#fff;
+		background-color:#333;
+		border-bottom-color:#333;	
+	}

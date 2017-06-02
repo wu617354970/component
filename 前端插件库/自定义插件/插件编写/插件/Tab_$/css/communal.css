@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+body{ font-size:12px;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { margin:0; padding:0;}
+
+
+ol, ul { list-style:none;}
+
+.jd_tagmain{width:1000px;margin:0 auto;}
+
+.jd_tag_tit{ background:url(../images/titbg3.jpg) no-repeat; height:34px; padding:1px;zoom:1;}
+.jd_tag_tit:after{ content:""; display:block; clear:both;}
+.jd_tag_tit li{ width:125px; height:34px; float:left;}
+.jd_tag_tit li a{ display:block;width:125px; height:34px;}
+.jd_tag_tit li.on1{ background:url(../images/jd_zi_04.jpg) 0 50%}
+.jd_tag_tit li.on2{ background:url(../images/jd_zi_04.jpg) -125px 50%}
+.jd_tag_tit li.on3{ background:url(../images/jd_zi_04.jpg) -250px 50%}
+.jd_tag_tit li.on4{ background:url(../images/jd_zi_04.jpg) -375px 50%}
+.jd_tag_tit li.on5{ background:url(../images/jd_zi_04.jpg) -500px 50%}
+.jd_tag_tit li.on6{ background:url(../images/jd_zi_04.jpg) -625px 50%}

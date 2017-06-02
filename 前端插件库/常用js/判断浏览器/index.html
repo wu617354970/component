@@ -1,0 +1,76 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<div id="jsBrowser">
+
+
+</div>
+
+<script type="text/javascript" src="js/browser.js"></script>
+	<script type="text/javascript">
+		//快捷方式
+	var ie = browser.ie,
+		webkit = browser.webkit,
+		chrome = browser.chrome,
+		safari = browser.safari,
+		gecko = browser.gecko,
+		mac = browser.mac,
+		opera = browser.opera,
+		quirks = browser.quirks,
+		isCompatible = browser.isCompatible,
+		/*Compat检测浏览器模式*/
+		ie11Compat = browser.ie11Compat,
+		ie9Compat = browser.ie9Compat,
+		ie8 = browser.ie8,
+		ie8Compat = browser.ie8Compat, 
+		ie7Compat = browser.ie7Compat,
+		ie6Compat = browser.ie6Compat,
+		ie9above = browser.ie9above,
+		ie9below = browser.ie9below,
+		ie11above = browser.ie11above,
+		ie11below = browser.ie11below;
+		
+		var   jsBrowser=document.getElementById('jsBrowser');
+		var  info=[
+		'ie/Trident内核:--'+ie,
+		'webkit内核:--'+webkit,
+		'gecko内核:'+gecko,
+		'Presto内核(Opera前内核):'+opera,
+		'<br /> ',
+		'<br /> ',
+		
+		'quirks(怪异模式):'+quirks,
+		'isCompatible(浏览器是否能够与UEditor兼容):'+isCompatible,
+		'chrome浏览器:'+chrome,
+		'safari浏览器:'+safari,
+		'firefox浏览器(是gecko的内核):'+gecko,
+		'mac(mac平台):'+mac,
+		
+		'version:'+browser.version,
+		'<br /> ',
+		'<br /> ',
+		'IE Compat检测浏览器模式',
+		'ie11Compat:'+ie11Compat,
+		'ie9Compat:'+ie9Compat,
+		'ie8:'+ie8,
+		'ie8Compat:'+ie8Compat,
+		'ie7Compat:'+ie7Compat,
+		'ie6Compat:'+ie6Compat,
+		'ie9above:'+ie9above,
+		'ie9below:'+ie9below,
+		'ie11above:'+ie11above,
+		'ie11below:'+ie11below
+		
+				];
+		var  html=[];
+			info.forEach(function(value,index){
+				html.push('<p>'+value+'</p>')
+			});
+			jsBrowser.innerHTML=html.join('');
+	</script>
+</body>
+</html>

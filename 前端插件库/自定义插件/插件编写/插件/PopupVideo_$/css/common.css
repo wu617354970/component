@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* module css */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { margin:0; padding:0; font-size:12px;font-family:'宋体';}
+
+
+
+.v_box{position:absolute;left:0px;top:0px;z-index:1000;display:none;width:680px;height:380px; background:url(../images/video_box_bg.png) no-repeat;}
+.v_box .v_con{width:640px;heihgt:360px;float:left;margin:9px 7px 0 10px;display:inline;}
+.v_box .closeBtn{width:23px;height:23px;float:left;cursor:pointer;margin-top:2px;}

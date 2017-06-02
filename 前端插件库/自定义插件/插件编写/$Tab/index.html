@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>tab切换效果</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/common.css" media="all" />
+</head>
+<body>
+<div class="contain">
+		<h2 class="h2_18_m" >addTab()方法</h2>
+		<p class="p_info">时间:2014-07-14，作者:wuwg</p>
+		<div class="main">
+			<table class="table_contain" >
+				<tr>
+					<td>
+						<div id="jd_tab" class="jd_tab">
+							  <!-- 导航 -->
+							  <ul class="nav">
+								<li><a href="javascript:void(0);">首页</a></li>
+								<li><a href="javascript:void(0);">法院概况</a></li>
+								<li><a href="javascript:void(0);">法院新闻</a></li>
+								<li><a href="javascript:void(0);">队伍建设</a></li>
+								<li><a href="javascript:void(0);">审执工作</a></li>
+								<li><a href="javascript:void(0);">业务研究</a></li>
+							  </ul>
+							  <!-- 内容 -->
+							  <div class="con">         
+								  <div  class="con_item">内容1</div>
+								  <div  class="con_item">内容2</div>
+								  <div  class="con_item">内容3</div>
+								  <div  class="con_item">内容4</div>
+								  <div  class="con_item">内容5</div>
+								  <div  class="con_item">内容6</div>           
+							  </div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="jd_tab_mulit" class="jd_tab">
+							  <!-- 导航 -->
+							  <ul class="nav">
+									<li><a href="javascript:void(0);">首页</a></li>
+									<li><a href="javascript:void(0);">法院概况</a></li>
+									<li><a href="javascript:void(0);">法院新闻</a></li>
+									<li><a href="javascript:void(0);">队伍建设</a></li>
+									<li><a href="javascript:void(0);">审执工作</a></li>
+									<li><a href="javascript:void(0);">业务研究</a></li>
+							  </ul>
+							  <!-- 内容 -->
+							  <div class="con">         
+								  <div  class="con_item" >内容1</div>
+								  <div  class="con_item">内容2</div>
+								  <div  class="con_item">内容3</div>
+								  <div  class="con_item">内容4</div>
+								  <div  class="con_item">内容5</div>
+								  <div  class="con_item">内容6</div>           
+							  </div>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<!-- table_contain end -->
+		</div>
+</div>
+<script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="scripts/tab.js"></script>  
+<script type="text/javascript">
+	/**************************************************************************************************************************************************************
+	 *	方法名：				addTab();		
+	 *	使用范例 ： 			$("#jd_tab").addTab({});		
+	 *	默认参数
+	 *	index					默认索引(默认第一个0)
+	 *	selectedClass			选中样式
+	 *	classType				样式为单个(only)还是多个(muilt) (默认为单个)
+	 *	lastLiLoseEffect		boolean 类名，默认 false,最后一个li是否无效
+	 *	mouseType				鼠标类型(默认点击click)
+	 *	isFade					是否使用渐隐效果
+	 *	tweenTime				渐隐缓动时间
+	 *	autoPlay				是否使用自动切换
+	 *	delay					自动切换等待时间(默认6000----6秒)
+	*************************************************************************************************************************************************************/
+    	$("#jd_tab").addTab({	
+				index : 0,
+				selectedClass : "on",
+				classType : "only",
+				mouseType : "mouseover",
+				isFade : false
+			});
+		$("#jd_tab_mulit").addTab({	
+				index : 0,
+				selectedClass : "on",
+				classType : "mulit",
+				mouseType : "mouseover",
+				isFade : true,
+				tweenTime : 300,
+				autoPlay : false,
+				delay : 6000
+			});	
+</script>
+</body>
+</html>

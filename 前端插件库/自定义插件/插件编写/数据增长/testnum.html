@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<div class="fd_count"  data-from="0"   data-to="300" data-speed="5000"  data-refresh-Interval="10"   data-decimals="0" >
+	
+	</div>
+	
+	<div class="counter col_fourth">
+		<i class="fa fa-code fa-2x"></i>
+			<h2 id="count-number1" class="timer count-title"  
+			data-count-to-Options='{ 
+					"speed":"2500", 
+					"to":"3001"}' >
+				3001</h2>
+			<h2 id="count-number2" class="timer count-title"   data-count-to-Options='{ "speed":"2500", "to":"900"}'>900</h2>
+			<h2 id="count-number" class="timer count-title"   data-count-to-Options='{ "speed":"2500", "to":"9000"}'>9000</h2>
+	
+		</div>
+		
+	<script type="text/javascript" src="jQuery.v1.11.1.min.js"></script>
+	<script type="text/javascript" src="dynamicNum.js"></script>
+	<script type="text/javascript">
+
+		$(".fd_count").countTo({
+			onUpdate:function(value){
+					//alert(value)
+			},
+			onComplete:function(value){
+				//alert("完成了");
+				//alert(value)
+			}
+		});
+		
+	  // start all the timers
+	  $('.timer').each(count);  
+		
+	  function count(options) {
+		var $this = $(this);
+			options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+			$this.countTo(options);
+	  }
+	  
+	  // custom formatting example  自定义格式化文本
+	
+	  
+
+	 
+		$(".fd_count").text($('#count-number').data("countToOptions").speed)
+	</script>
+</body>
+</html>

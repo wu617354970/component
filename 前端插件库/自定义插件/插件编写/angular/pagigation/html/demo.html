@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- build:css ../css/main.css -->
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/component-pagination.css"/>
+    <!-- endbuild -->
+    <style>
+        .fd-contain {
+            margin: 0 auto;
+            padding-top: 20px;
+            width: 1000px;
+        }
+        .fd-list {
+            padding: 0 10px;
+            border: 1px solid #ddd;
+        }
+        .fd-list li {
+            border-bottom: 1px dotted #ddd;
+        }
+        .fd-list li:hover {
+            background-color: #f0f0f0;
+        }
+        .fd-list li:last-child{
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+<div class="fd-contain"   ng-controller="appControllerPagigation">
+    <ul class="fd-list">
+        <li ng-repeat="item in scope.data.dataList track by $index"  ng-bind="item.name"></li>
+    </ul>
+    <pagination
+            page-count="scope.pagination.pageCount"
+            current-page="scope.pagination.currentPage"
+            page-change-callback="scope.pagination.pageChangeCallback()"
+            visible-page-count="scope.pagination.visiblePageCount"
+            first-text="首页"
+            prev-text="前一页"
+            next-text="后一页"
+            last-text="尾页"
+            show-first-last="scope.pagination.showFirstLast"
+            show-pagination="scope.pagination.showPagination"
+            show-pagination-info="scope.pagination.showPaginationInfo"
+            item-count="scope.pagination.itemCount"
+            >
+        ></pagination>
+    <script src="../js/jquery/jQuery.v1.11.1.min.js"></script>
+    <script src="../js/angular/angular.min.js"></script>
+    <script src="../js/angular/sanitize.js"></script>
+    <script src="../js/pagigation.js"></script>
+    <script src="../js/demo.js"></script>
+</div>
+<!--fd-contain end-->
+</body>
+</html>

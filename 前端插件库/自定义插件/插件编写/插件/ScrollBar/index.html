@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Scrollbar</title>
+<style type="text/css">
+
+	
+	/**水平*/
+	.hcontainer{ width:500px; height:320px; margin-left:50px;}
+	.hcontent{ width:500px; height:300px; background-color:#FCF; overflow:hidden}
+	
+	.hslider{position:relative; width:500px; height:20px; margin:0px;}
+	.harrowUp{ width:20px;  height:20px; background-color:#000; float:left;}
+	.harrowDown{ width:20px;  height:20px; background-color:#000; float:left;}
+	.htrack{ width:460px; height:20px; background-color:#999; float:left;}
+	.hthumb{ position:absolute; height:20px; width:200px; background-color:#666;}
+	
+	/**水平 没有左右按钮*/
+	.hcontainer_n{ width:500px; height:320px; margin-top:50px; margin-left:50px;}
+	.hcontent_n{ width:500px; height:300px; background-color:#FCF; overflow:hidden}
+	
+	.hslider_n{position:relative; width:500px; height:20px; margin:0px;}
+	.htrack_n{ width:500px; height:20px; background-color:#999; float:left;}
+	.hthumb_n{ position:absolute; height:20px; width:200px; background-color:#0CF;}
+	
+	/**垂直*/
+	.vcontainer{width:500px; height:300px; margin-top:100px;}
+	.vcontent{ width:480px; height:300px; background-color:#FCF; overflow:hidden; float:left;}
+	
+	.vslider{ position:relative; width:20px; height:300px; margin:0px; float:left; overflow:hidden;}
+	.varrowUp{ width:20px;  height:20px; background-color:#06F;}
+	.varrowDown{ width:20px;  height:20px; background-color:#06F;}
+	.vtrack{ width:20px; height:260px; background-color:#999;}
+	.vthumb{ position:absolute; width:20px; height:200px; background-color:#0CF;}	
+	
+	
+	/**垂直 没有左右按钮*/
+	.vcontainer_n{width:500px; height:300px; margin-top:100px;}
+	.vcontent_n{ width:480px; height:300px; background-color:#FCF; overflow:hidden; float:left;}
+	
+	.vslider_n{ position:relative; width:20px; height:300px; margin:0px; float:left; overflow:hidden;}
+	.vtrack_n{ width:20px; height:300px; background-color:#999;}
+	.vthumb_n{ position:absolute; width:20px; height:200px; background-color:#0CF;}	
+	
+</style>
+</head>
+
+<body>
+
+	<!--水平滚动条-->
+	 <div id="hcontainer" class="hcontainer">     
+    	<div id="hcontent" class="hcontent">
+        	<div>
+            	1<br />2<br />3<br />4<br />start5677777777777888888888888899999999999991010101010101010101010101011111111111111111111111122222222222222222222222222222222ddddddddddddddddddddddddddddddddddddddddddddddddddend
+            </div>  
+        </div>        
+        
+        <div id="hslider" class="hslider">    	
+    		<div id="harrowUp" class="harrowUp"></div>
+        	<div id="htrack" class="htrack">
+        		<div id="hthumb" class="hthumb"></div>
+       		 </div>
+        	<div id="harrowDown" class="harrowDown"></div>        
+    	</div>        
+    </div>	
+    
+    <!--水平滚动条  没有左右按钮-->
+	 <div id="hcontainer_n" class="hcontainer_n">     
+    	<div id="hcontent_n" class="hcontent_n">
+        	<div>
+            	1<br />2<br />3<br />4<br />start5677777777777888888888888899999999999991010101010101010101010101011111111111111111111111122222222222222222222222222222222ddddddddddddddddddddddddddddddddddddddddddddddddddend
+            </div>  
+        </div>        
+        
+        <div id="hslider_n" class="hslider_n">    	
+        	<div id="htrack_n" class="htrack_n">
+        		<div id="hthumb_n" class="hthumb_n"></div>
+       		 </div>      
+    	</div>        
+    </div>	
+    
+    
+    
+    <!--垂直滚动条-->
+     <div id="vcontainer" class="vcontainer">     
+    	<div id="vcontent" class="vcontent">
+        	<div>
+            	1<br />2<br />3<br />4<br />start<br />5<br />67<br />777777<br />777788888888888
+                <br />8899999999999
+                <br />
+                991010101010101<br />010101010101011111<br />1111111111111<br />
+                <br />222222222<br />222<br />222222222<br />2222<br /><br />22<br />end   
+                <br />222222222<br />222<br />222222222<br />2222<br /><br />22<br />end   
+                <br />222222222<br />222<br />222222222<br />2222<br /><br />22<br />end   
+                <br />222222222<br />222<br />222222222<br />2222<br /><br />22<br />end   
+                <br />222222222<br />222<br />222222222<br />2222<br /><br />22<br />end    
+                <br />222222222<br />222<br />222222222<br />2222<br /><br />22<br />end   
+                <br />222222222<br />222<br />222222222<br />2222<br /><br />22<br />end    
+                <br />222222222<br />222<br />222222222<br />2222<br /><br />22<br />end   
+                <br />222222222<br />222<br />222222222<br />2222<br /><br />22<br />end    
+                <br />222222222<br />222<br />222222222<br />2222<br /><br />22<br />ending
+            </div>  
+        </div>        
+        
+        <div id="vslider" class="vslider">    	
+    		<div id="varrowUp" class="varrowUp"></div>
+        	<div id="vtrack" class="vtrack">
+        		<div id="vthumb" class="vthumb"></div>
+       		 </div>
+        	<div id="varrowDown" class="varrowDown"></div>        
+    	</div>
+    </div>	
+    
+    
+     <!--垂直滚动条  没有左右按钮-->
+     <div id="vcontainer_n" class="vcontainer_n">     
+    	<div id="vcontent_n" class="vcontent_n">
+        	<div>
+            	start_______
+                <br />2<br />3<br />4<br />start<br />5<br />67<br />777777<br />777788888888888
+                <br />8899999999999
+                <br />
+                991010101010101<br />010101010101011111<br />1111111111111<br />ending
+            	<br />222222222<br />222<br />222222222<br />2222111<br /><br />22<br />ending
+                <br />222222222<br />222<br />222222222<br />2222<br /><br />22<br />ending   
+                <br />222222222<br />222<br />222222222<br />2222<br /><br />22<br />ending   
+                <br />222222222<br />222<br />222222222<br />2222<br /><br />22<br />ending   
+                <br />222222222<br />222<br />222222222<br />2222<br /><br />22<br />ending
+            </div>  
+        </div>        
+        
+        <div id="vslider_n" class="vslider_n">
+        	<div id="vtrack_n" class="vtrack_n">
+        		<div id="vthumb_n" class="vthumb_n"></div>
+       		 </div>   
+    	</div>
+    </div>
+    
+    <!--使用时引入压缩过的JS文件  未压缩文件提供参考-->
+    <script type="text/javascript" src="js/scrollbar.z.js"></script>
+    
+    <!--<script type="text/javascript" src="js/scrollbar.z.min.js"></script>--> 
+    <script type="text/javascript">
+		
+		/** 以下参数为必须传入
+		* container  		整个区域的容器ID 包括内容 滚动条
+		* content	 		内容ID
+		* scrollContainer	滚动条容器ID 包括 上下按钮 轨道 滑块
+		* track				滑动轨道
+		* arrowUp			向上(向左)按钮ID
+		* arrowDown			向下(向右)按钮ID
+		*/
+		
+		/** 以下为设置参数
+		* dir				滚动条方向(垂直或者水平)  v  or  h  (垂直水平英文单词首字母)____(注释:默认垂直 v 如果是垂直此参数可省略) !
+		* step				上下按钮移动步长(建议20 - 50 范围)____(注释:默认20 如果不需要更大的步长此参数可省略) !
+		* tweenTime			移动到目标的缓动时间(建议0.2 - 0.5 范围)____(注释:默认0.3 如果不需要更长的缓动时间此参数可省略) !
+		*/
+		
+		/*------------------------------------------------------------------------------------------------------------*/
+		//水平滚动条
+		YM.addScrollbar({
+			container : 'hcontainer',
+			content : 'hcontent',
+			scrollContainer : 'hslider',
+			track : 'htrack',
+			thumb : 'hthumb',
+			arrowUp : 'harrowUp',
+			arrowDown : 'harrowDown',
+			dir : 'h',
+			step : 20,
+			tweenTime : 0.3
+		});
+		
+		
+		/*------------------------------------------------------------------------------------------------------------*/
+		//水平没有左右按钮滚动条
+    	YM.addScrollbar({
+			container : 'hcontainer_n',
+			content : 'hcontent_n',
+			scrollContainer : 'hslider_n',
+			track : 'htrack_n',
+			thumb : 'hthumb_n',
+			arrowUp : 'harrowUp_n',
+			arrowDown : 'harrowDown_n',
+			dir : 'h',
+			tweenTime : 0.5
+		});
+		
+		
+		//------------------------------------------------------------------------------------------------------------		
+		//垂直滚动条
+		YM.addScrollbar({
+			container : 'vcontainer',
+			content : 'vcontent',
+			scrollContainer : 'vslider',
+			track : 'vtrack',
+			thumb : 'vthumb',
+			arrowUp : 'varrowUp',
+			arrowDown : 'varrowDown',
+			dir : 'v',
+			step : 30
+		});
+		
+		
+		
+		//------------------------------------------------------------------------------------------------------------		
+		//垂直滚动条 没有上下按钮
+		YM.addScrollbar({
+			container : 'vcontainer_n',
+			content : 'vcontent_n',
+			scrollContainer : 'vslider_n',
+			track : 'vtrack_n',
+			thumb : 'vthumb_n'
+		});
+		
+		
+		/*
+		var aa = YM.addScrollbar({
+			container : 'vcontainer_n',
+			content : 'vcontent_n',
+			scrollContainer : 'vslider_n',
+			track : 'vtrack_n',
+			thumb : 'vthumb_n'
+		});
+		
+		//动态添加内容后  调用更新滚动条方法
+		//document.getElementById('vcontent_n').innerHTML += document.getElementById('vcontent_n').innerHTML;
+		//aa.update();
+		
+		//document.getElementById('vcontent_n').innerHTML += document.getElementById('vcontent_n').innerHTML;
+		//aa.update();
+		*/
+		
+    </script>
+</body>
+</html>

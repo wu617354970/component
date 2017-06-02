@@ -1,0 +1,102 @@
+@charset "utf-8";
+/*css document*/
+
+/************************************
+ *	Version 		14.0.1
+ *	Author			wuwg
+ *  CreateTime      14.07.14
+ *	UpdateTime		14.07.14
+ **************************************/
+ 
+ .contain {
+		min-width:1002px;
+		width:100%;
+		height:100%;
+		background-color:#fff;
+	}
+.main {
+		margin:0 auto;
+		padding:20px 0;
+		width:1002px;	
+	}	
+.h2_18_m {
+		padding:15px 0;
+		color:#333;
+		text-align:center;
+		font:700 18px/30px "Microsoft YaHei";
+	}
+.h3_16_m {
+		color:#333;
+		text-align:center;
+		font:700 16px/30px "Microsoft YaHei";
+	}	
+.p_info {
+		color:#999;
+		text-align:center;
+		font:12px/26px SimSun;
+	}	
+.table_contain{
+		width:100%;
+	}	
+.table_contain td {
+		padding:10px ;
+	}
+/*----------------------------------------- theme  js  tab----------------------------------*/	
+.jd_tab {
+		padding:10px 0;
+		border:1px solid #ddd;
+		width:1000px;
+		background-color:#eeeeee;
+		zoom:1;
+	}
+.jd_tab:after {
+		content:"";
+		display:block;
+		clear:both;
+	}	
+.jd_tab .con {
+		float:right;
+		margin-right:10px;
+		width:690px;
+		min-height:300px;
+		color:#666;
+		font:14px/30px "Microsoft YaHei";
+		background-color:#fff;
+	}
+.jd_tab .con_item {
+		padding:30px 20px; 
+	}  	
+.nav{
+		float:left;
+		margin:0 10px;
+		width:280px;
+		border-bottom:1px solid #ddd;
+		background-color:#fff;
+	}	
+.nav  li {
+		height:40px;
+		font:16px/40px "Microsoft YaHei";
+		white-space:nowrap;
+		text-align:center;
+		overflow:hidden;
+		overflow:hidden;
+		border:1px solid #ddd;
+		border-bottom:none;
+	}
+	
+.nav   li    a {
+		display:block;
+		color:#333;
+		border-left:2px solid transparent;
+	}	
+.nav   li    a:hover {
+		text-decoration:none;
+		background-color:#f7f7f7;
+	} 	
+/*----------------------------------------------  only --------------------------------------------*/		
+.nav .on   a ,
+.nav .on   a:hover {
+		color:#cb924b;
+		border-left-color:#cb924b;	
+		background-color:#f7f7f7;
+	}	

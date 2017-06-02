@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+	<style type="text/css">
+		
+		body{ margin:0; padding:0;}
+	
+    .dragBox{ position:relative; left:100px; top:100px; width:500px; height:300px; border:1px solid #333;}		
+		.vdrag{ position:absolute; width:20px; height:20px; background-color:#903; cursor:pointer;}
+		
+    </style>
+</head>
+
+<body>
+
+		<div id="vdragBox" class="dragBox">
+          <div id="vdrag" class="vdrag"></div>
+    </div>
+    
+    <script type="text/javascript" src="js/drag.z.js"></script>
+    <script type="text/javascript">
+		
+		/*
+		* limitType 限制类型  垂直v  水平h  锁定在父容器in  无限制n  不允许拖动no
+		*/
+		
+		YM.addDrag({
+			target : 'vdrag',
+			container : 'vdragBox',
+			limit : true,
+			limitType : 'in'
+		});
+		
+    </script>
+</body>
+</html>

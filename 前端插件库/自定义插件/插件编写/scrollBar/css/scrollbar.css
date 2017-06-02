@@ -1,0 +1,33 @@
+﻿@charset "utf-8";
+/**
+* 垂直滚动条
+* 记住容器必须指定容器高（！important） width:400px;height:300px;
+*/
+.fd-scroll-contain{float:left;margin-right:20px;position:relative;margin:10px;width:400px;height:300px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border:1px solid #ddd;overflow:hidden;}
+.fd-scroll-track{position:absolute;top:1%;right:3px;z-index:2;width:6px;height:98%;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.1);}
+.fd-scroll-bar{position:absolute;top:0;left:0;z-index:2;width:100%;height:80px;border-radius:10px;cursor:default;background-color:rgb(33,112,177);background-color:rgba(33,112,177,.8);}
+.fd-scroll-bar:hover,.fd-scroll-bar.pressed{background-color:rgb(33,112,255); background-color:rgba(33,112,177,1);}
+.fd-scroll-content{position:absolute;top:0;left:0;z-index:2;width:100%;}
+
+/**
+* 水平滚动条
+*/
+.fd-scroll-contain.horizontal .fd-scroll-track{position:absolute;top:initial;bottom:3px;right:1%;z-index:2;width:98%;height:6px;background-color:rgb(0,0,0);  background-color:rgba(0,0,0,0.1);}
+.fd-scroll-contain.horizontal .fd-scroll-bar{position:absolute;top:0;left:0;z-index:2;width:80px;height:100%;border-radius:10px;cursor:default;background-color:rgb(33,112,177);  background-color:rgba(33,112,177,.8);}
+.fd-scroll-contain.horizontal .fd-scroll-bar:hover,.fd-scroll-bar.pressed{background-color:rgb(33,112,255); background-color:rgba(33,112,177,1);}
+/**
+* 内容的宽度自己去写，demo中我写2000px
+* 记住容器必须指定容器宽 （！important） width:400px;height:300px;
+*/
+.fd-scroll-contain.horizontal .fd-scroll-content{position:absolute;top:0;left:0;z-index:2;width:2000px;height:100%;}
+
+
+
+
+
+		
+	
+
+
+
+

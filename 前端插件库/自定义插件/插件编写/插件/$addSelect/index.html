@@ -1,0 +1,158 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>add Select</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/common.css" media="all" />
+	<style type="text/css">
+		.contain{
+				margin:0 auto;
+				
+				width:1200px;
+			}
+		.box1 {
+			position:relative;
+			margin-bottom:20px;
+			padding:40px;
+			border:1px solid #000;
+			position:relative;
+			z-index:9999;
+		
+		}
+		.box2 {
+			margin:0 auto;
+			width:1000px;
+			}
+		.box4 {
+			position:relative;
+			padding:20px;
+			border:1px solid #000;
+			padding:5px 0;
+			z-index:9998;
+			margin-bottom:40px;
+		}
+		.box3 {
+			position:relative;
+			
+			border:1px solid #000;
+			padding:20px;
+			z-index:9997;
+		}
+	
+	</style>
+</head>
+<body>
+	<div class="contain">
+		<div class="box1">
+			<div class="search_menu_sub  js_search_menu_sub">
+				<div class="search_value_box_sub">
+					<span class="sp_mousedown" id="sp_mousedown1"></span>
+					<span class="sp_gain_value" >全部</span>
+				</div>
+				<!-- search_value_box end -->
+				<dl class="search_con_nav_sub" >
+					<dt>全部</dt>
+					<dd class="dd_hover">全部1</dd>
+					<dd>全部2</dd>
+					<dd>全部3</dd>
+					<dd>全部4</dd>
+					<dd>全部5</dd>
+				</dl>
+			</div>
+			<!-- search_menu_sub end -->
+		</div>
+		<!-- box end -->
+	<div class="box4">
+		<div class="layer box2">
+			<div class="search_box_column">
+				<input type="text" name="" id="ipt_text_index" class="ipt_text_column"  value="标题搜索"/>
+				<div class="search_menu_column js_search_menu_column">
+					<div class="search_value_box_column">
+						<span class="sp_mousedown" id="sp_mousedown2"></span>
+						<span class="sp_gain_value">全部</span>
+					</div>
+					<!-- search_value_box end -->
+					<dl class="search_con_nav_column">
+						<dt>全部</dt>
+						<dd class="dd_hover">全部1</dd>
+						<dd>全部2</dd>
+						<dd>全部3</dd>
+						<dd>全部4</dd>
+						<dd>全部5</dd>
+					</dl>
+				</div>
+				<a href="javascript:void(0);" onmouseover="this.hideFocus=true;" class="a_btn_search_column">搜索</a>
+			</div>
+			<!-- search_box_column end -->
+		</div>
+		<!-- layer end -->
+	</div>
+	
+	
+		<div class="layer mb10 pos_r  box3">
+			<div class="seacher_box_index">
+				<input type="text" name="" id="ipt_text_index" class="ipt_text_index"  value="标题搜索"/>
+				<div class="search_menu">
+					<div class="search_value_box">
+						<span class="sp_mousedown"  id="sp_mousedown3"></span>
+						<span class="sp_gain_value">全部</span>
+					</div>
+					<!-- search_value_box end -->
+					<dl class="search_con_nav">
+						<dt>全部</dt>
+						<dd class="dd_hover">全部1</dd>
+						<dd>全部2</dd>
+						<dd>全部3</dd>
+						<dd>全部4</dd>
+						<dd>全部5</dd>
+					</dl>
+				</div>
+				<a href="javascript:void(0);" onmouseover="this.hideFocus=true;" class="a_btn_search_index"></a>
+			</div>
+		</div>
+		<!-- layer end -->
+	</div>
+	<script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="scripts/addSelect.js"></script>
+	<script type="text/javascript" src="scripts/addfocus.js"></script>
+	<script type="text/javascript">
+		$(".js_search_menu_sub").addSelect({
+			triggerEleId:"sp_mousedown1",
+			extendTrigger:true,
+			searchContentContain:".search_con_nav_sub",	
+			addHoverClass:"dd_hover",
+			getValueClass:".sp_gain_value"
+		});
+		$(".js_search_menu_column").addSelect({
+			triggerEleId:"sp_mousedown2",
+			extendTrigger:true,
+			searchContentContain:".search_con_nav_column",	
+			addHoverClass:"dd_hover",
+			getValueClass:".sp_gain_value"
+		});
+		$(".search_menu").addSelect({
+			triggerEleId:"sp_mousedown3",
+			extendTrigger:true,
+			searchContentContain:".search_con_nav",	
+			addHoverClass:"dd_hover",
+			getValueClass:".sp_gain_value"
+		});
+		
+		$(".ipt_text_column").addFocus({
+			textContent : "标题搜索",
+			defaultColor : "#bababa",
+			textColor : "#333",
+			whetherAddClass : false,
+			newClass : ""
+		});
+		$(".ipt_text_index").addFocus({
+			textContent : "标题搜索",
+			defaultColor : "#bababa",
+			textColor : "#333",
+			whetherAddClass : false,
+			newClass : ""
+		});
+	</script>
+</body>
+</html>

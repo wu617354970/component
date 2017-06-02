@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+
+div,table{
+		padding:0px;
+		margin:0px;
+	}
+
+.fd_date {
+		width:180px;
+		background:#fff;
+	}
+	
+/*----日期控件---*/
+
+.fd_date .date {
+		width:255px;
+		height:248px;
+		background:url(../images/date_bg.jpg) no-repeat 0 0;
+		margin-top:7px;
+	}
+	
+.fd_date .hasDatepicker {
+		width:100%;
+	}
+	
+.fd_date .ui-datepicker-header {
+		width:100%;
+		height:30px;
+		background:#3592e2;
+		
+	}
+	
+.fd_date .ui-datepicker-prev {
+		width:20px;
+		height:20px;
+		float:left;
+		margin:5px 0px 0px 3px;
+		display:inline;
+		text-indent:999em;
+		overflow:hidden;
+		cursor:pointer;
+		background:#4ca6e3 url(../images/left.gif) no-repeat 8px center;
+	}
+	
+.fd_date .ui-datepicker-next {
+		width:20px;
+		height:20px;
+		float:right;
+		margin:5px 3px 0px 0px;
+		display:inline;
+		text-indent:999em;
+		overflow:hidden;
+		cursor:pointer;
+		background:#4ca6e3 url(../images/right.gif) no-repeat 8px center;
+	}
+	
+.fd_date .ui-datepicker-title {
+		width:100px;
+		height:20px;
+		float:left;
+		text-align:center;
+		line-height:20px;
+		margin:5px 0px 0px 20px;
+	}
+	
+.fd_date .ui-datepicker-year {
+		color:#ffffff;
+		font-size:14px;
+		display:inline-block;
+		padding:0px 5px;
+	}
+
+.fd_date .ui-datepicker-month {
+		color:#ffffff;
+		font-size:14px;
+		display:inline-block;
+		padding:0px 5px;
+	}
+	
+.fd_date .ui-datepicker-calendar {
+		width:100%;
+		margin:0px auto;
+		border:1px solid #dbdbdb;
+		border-collapse:collapse;
+	}
+	
+.fd_date .ui-datepicker-calendar th {
+		height:25px;
+		text-align:center;
+		color:#666666;
+		font-size:12px;
+		background:#f5f5f5;
+	}
+
+.fd_date .ui-datepicker-calendar td {
+		height:24px;
+		text-align:center;
+		color:#666666;
+		font-size:12px;
+		border:1px solid #dbdbdb;
+		border-collapse:collapse;
+	}
+	
+.fd_date .ui-datepicker-calendar td a {
+		display:block;
+		line-height:24px;
+		color:#2a2a2a;
+		text-decoration:none;
+		font-family:arial;
+	}
+
+.fd_date td.ui-datepicker-current-day a {
+		color:#3592e2;
+		background:#d1eaff;
+	}
+
+	
+.fd_date td.ui-datepicker-today a {
+		color:#fff;
+		font-weight:bold;
+		background:#3592e2;
+	}
+	
+.fd_date .jrxx {
+		width:100%;
+		float:left;
+	}
+	
+.fd_date .xh {
+		padding:0px 0px 0px 155px;
+		line-height:25px;
+		color:#ece72d;
+		font-size:16px;
+		font-weight:bold;
+		font-family:'microsoft yahei';
+		font-style:italic;
+	}

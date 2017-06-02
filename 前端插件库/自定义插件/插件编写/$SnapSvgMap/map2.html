@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>晃动的水</title>
+	<meta   decrition="svg  snap "/>
+	<meta   author="wuwg "/>
+	<style type="text/css">
+			svg {
+				display:block;
+				margin:0 auto;
+				border:1px solid #000;
+				background-color:gray;
+				
+			}
+			h2 {
+				margin-bottom:0;
+				text-align:center;	
+				font:24px/30px "Microsoft YaHei";
+			}
+			p {
+				margin-top:0;
+				margin-bottom:20px;
+				text-align:center;
+				color:#999;
+				font:12px/30px "Microsoft YaHei";
+				transition:all  0.2s 0s linear ;
+				height:30px;
+				overflow:hidden;
+				border-bottom:1px solid #ddd;
+			}
+			p:hover {
+				font-size:14px;
+				color:#000;
+			}
+	</style>
+</head>
+<body>
+<h2>画容器晃动水测试</h2>
+<p>author  wuwg(2015年07月016日)</p>
+<svg  id="map"    width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"  enable-background="new 0 0 1098 801"  version="1.1"></svg>
+<script type="text/javascript" src="scripts/jQuery.v1.11.1.min.js"></script>	
+<script type="text/javascript" src="scripts/snap.svg-min.js"></script>	
+<script type="text/javascript" src="scripts/pluginFliudWater.js"></script>	
+<script type="text/javascript">
+	var  x=new DrawFluidWater("#map",{
+			x:200,
+			y:200,
+			scale:1,	
+			width:300,
+			height:200,
+			viewBox:0.8,
+			currentCount:0,
+			backgroundColor:"gray",
+			isShowConsole:true,//  放出更新日志
+			callback:function(){
+				alert("执行回调函数")
+			}
+		});
+		var  num=[0,0.2,0.5,0,0.8,0.1,2,0.6];
+		var i=0;
+		setInterval(function(){
+			i++;
+			if(i>6){
+				i=0;
+			}
+			x.update(num[i]);
+		},6000);		
+</script>	
+</body>
+</html>

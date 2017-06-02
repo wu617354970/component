@@ -1,0 +1,35 @@
+h2{padding:15px 0;color:#333;text-align:center;font:700 18px/30px "Microsoft YaHei";}
+h3{margin-bottom:30px;padding-bottom:10px;color:#333;text-align:center;font:700 16px/30px "Microsoft YaHei";border-bottom:1px solid #ddd;}
+p{color:#999;text-align:center;font:12px/26px SimSun;}
+*{box-sizing:border-box;}
+/******水平滚动样式*****/
+.fd-horizontal-contain{position:relative;width:420px;height:30px;text-align:center;}
+.fd-horizontal-contain .fd-operate-btn-pre,.fd-horizontal-contain .fd-operate-btn-next{float:left;width:50px;height:20px;background-color:#000;cursor:pointer;}
+.fd-horizontal-contain .fd-operate-btn.disabled { cursor: default;pointer-events: none;color: gray;opacity: 0.8;  background-color: #333;}
+.fd-horizontal-contain .fd-scrollarea{position:relative;float:left;margin:0 5px;width:304px;height:20px;overflow:hidden;}
+.fd-horizontal-contain .fd-scroll-target{width:1000px;height:100%;}
+.fd-horizontal-contain .fd-scroll-target>li{float:left;min-width:100px;padding:0 15px;background-color:#999;margin-right:3px;cursor:pointer;overflow: hidden;text-overflow: ellipsis;white-space: nowrap}
+.fd-horizontal-contain .fd-scroll-target>li a{color:#000;}
+.fd-horizontal-contain .fd-scroll-target>li.last{margin-right:0;}
+.fd-horizontal-contain .fd-scroll-target>li.active{color:#fff;cursor:default;background-color:blue;}
+.fd-horizontal-contain .fd-scroll-target>li.active a{color:#fff;}
+/******垂直滚动样式*******/
+.fd-vertical-contain{float:left;margin-right:30px;}
+.fd-vertical-contain{width:100px;height:205px;position:relative;  text-align: center;}
+.fd-vertical-contain .fd-scrollarea{position:relative;margin-top:5px;margin-bottom:5px;width:100px;height:152px;overflow:hidden;}
+.fd-vertical-contain .fd-operate-btn-pre,.fd-vertical-contain .fd-operate-btn-next {  display: block; margin: 0 auto;width:50px;height:20px;background-color:#000;cursor:pointer;}
+.fd-vertical-contain .fd-operate-btn.disabled { cursor: default;pointer-events: none;color: gray;opacity: 0.8;  background-color: #333;}
+.fd-vertical-contain .fd-scroll-target {position:relative;}
+.fd-vertical-contain .fd-scroll-target >li{width:100px;height:20px;background-color:#999;margin-bottom:2px;cursor:pointer;  overflow: hidden;text-overflow: ellipsis;white-space: nowrap}
+.fd-vertical-contain .fd-scroll-target>li a{color:#000;}
+.fd-vertical-contain .fd-scroll-target>li.last{margin-bottom:0;}
+.fd-vertical-contain .fd-scroll-target>li.active{background-color:#333;color:#fff;cursor:default;}
+.fd-vertical-contain .fd-scroll-target>li.active a{color:#fff;}
+/******测试*******/
+.fd-operate-btn{color:#fff;font:12px/20px "Microsoft Yahei";}
+.fd-mb20{margin-bottom:20px;}
+.fd-contain{padding:20px;}
+.fd-btn-contain{zoom:1;padding:20px 0;}
+.fd-btn-contain:after{content:"";display:block;clear:both;}
+.fd-btn{cursor:pointer;padding:0 5px;color:#333;background-color:#f0f0f0;font:12px/30px "Microsoft Yahei";border-radius:5px;border:1px solid #ddd;}
+.fd-btn-contain .fd-btn{float:left;margin-right:10px;}

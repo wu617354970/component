@@ -1,0 +1,12 @@
+/*css  document*/
+*{
+	margin:0;
+	padding:0;
+}
+.fd_box_01 {
+	padding:10px;
+	height:40px;
+	font:16px/40px "Microsoft YaHei";
+	border:1px solid #ddd;
+	background-color:#f0f0f0;
+}

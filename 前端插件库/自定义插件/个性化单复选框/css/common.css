@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+/***************************************
+*	Version 		16.00.01
+*	Author			liuj
+*  	CreateTime      16.04.08
+ *	UpdateTime		16.04.08
+* *************************************************/
+
+
+/*--普通单选复选框----*/
+.fd-radio-mn,.fd-checkbox-mn {
+	color:#333333;
+	font-size:14px;
+	line-height:20px;
+	padding:5px;
+}
+
+/*--单选框 默认样式----*/
+.fd-radio-mn a {
+	width:12px;
+	height:12px;
+	outline:none;
+	display:inline-block;
+	margin:0px 10px 0px 10px;
+	background:url(../images/radio_normal.png) no-repeat center center;
+}
+	
+/*--单选框 选中样式----*/
+.fd-radio-mn a.current {
+	background-image:url(../images/radio_select.png);
+}
+	
+/*--复选框 默认样式----*/
+.fd-checkbox-mn a {
+	width:13px;
+	height:13px;
+	outline:none;
+	display:inline-block;
+	margin:0px 10px 0px 10px;
+	background:url(../images/checkbox_normal.png) no-repeat center center;
+}
+	
+/*--复选框 选中样式----*/
+.fd-checkbox-mn a.current {
+	background-image:url(../images/checkbox_select.png);
+}
+

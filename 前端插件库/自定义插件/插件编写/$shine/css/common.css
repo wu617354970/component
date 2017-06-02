@@ -1,0 +1,15 @@
+@charset "utf-8";
+/*************************
+*vertion 		 2015.0.1
+*author    		 wuwg
+*createTime      20150618
+*updataTime		 20150618
+****************************/
+*{margin:0;padding:0;}
+.fd_mb20 {margin-bottom:20px;}
+.fd_bar_contain{position:relative;margin:10px;padding-right:80px;width:500px;border:1px solid #000;height:16px;background-color:#11233a;}/*父元素容器*/
+.fd_progresss_bar{position:relative;width:0;height:100%;background-color:#0286e7;}/*进度条*/
+.fd_progresss_bar .fd_count_contain{position:absolute;right:-85px;top:0;width:85px;height:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;color:#f0ff00;font:12px/16px "Microsoft YaHei";}/*整个数的外部容器*/
+.fd_progresss_bar .fd_get_count{padding-left:5px;}  /*当前数容器*/
+.fd_progresss_bar .fd_add_count{padding-left:5px;color:#ceffa7;font-style:normal;} /*增加数容器*/
+.fd_shine{position:absolute;top:0;left:0;z-index:22;height:100%;display:none;/*默认隐藏光*/}

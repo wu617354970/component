@@ -1,0 +1,120 @@
+﻿/*document css*/
+
+
+
+
+
+
+
+
+
+
+/*-----------   seacher_box_column ------------*/
+
+.search_box_column {
+		padding:20px 0 5px 310px;
+		height:57px;
+		background: url(../images/searzch_column.jpg) 50% 0 no-repeat;
+		border-bottom:5px solid #c6c6c6;
+	}
+.ipt_text_column {
+		float:left;
+		margin-right:8px;
+		width:190px;
+		padding:2px 10px;
+		height:18px;
+		border:1px solid #ba0019;
+		background:url(../images/ipt_bj.jpg) 0 0 repeat-x;
+		font:12px/18px SimSun;
+		color:#bababa;
+	}
+.a_btn_search_column {
+		float:left;
+		width:60px;
+		height:24px;
+		background: url(../images/a_btn_search_column.png) 0 0 no-repeat;
+		cursor:pointer;
+		font:14px/24px SimSun;
+		text-align:center;
+		color:#363636;
+	}
+.a_btn_search_column:hover {
+		text-decoration:none;
+		color:#363636;
+		background-position:0 -24px;
+	} 
+
+
+/*-----------   seacher_box_index ------------*/
+
+.seacher_box_index {
+		padding:5px 0 0 114px;
+		height:57px;
+		background: url(../images/search_index.jpg) 0 0 no-repeat;
+	}
+.ipt_text_index {
+		float:left;
+		margin-right:8px;
+		width:382px;
+		padding:3px 15px;
+		height:29px;
+		border:1px solid #9a9a9a;
+		background:none;
+		font:14px/29px SimSun;
+		color:#bababa;
+	}
+.a_btn_search_index {
+		float:left;
+		border-right:none;
+		width:72px;
+		height:35px;
+		border:1px solid #9a9a9a;
+		border-left:none;
+		background:none;
+		cursor:pointer;
+		font-size:0;
+		line-height:0;
+		text-indent:-9999em;
+		text-decoration:none;
+	}
+.a_btn_search_index:hover {
+		text-decoration:none;
+	} 
+
+/*sub select */
+.search_menu_sub{position:relative;width:204px;height:29px;border:1px solid #c6c6c6;font:14px/19px SimSun;color:#555;}
+.search_value_box_sub{width:100%;height:100%;overflow:hidden;}
+.search_value_box_sub span{display:block;font:14px/23px SimSun;color:#555;}
+.search_value_box_sub .sp_gain_value{padding:3px 10px;margin-right:29px;}
+.search_value_box_sub .sp_mousedown{float:right;height:100%;width:29px;background:url(../images/icon_arrow_gray_bottom.gif) 10px 11px no-repeat;cursor:pointer;}
+.search_con_nav_sub{display:none;position:absolute;top:29px;left:-1px;width:150px;border:1px solid #c6c6c6;border-right:none;border-top:none;background-color:#FFF;z-index:9999;}
+.search_con_nav_sub dt,.search_con_nav_sub dd{padding:3px 15px;height:20px;font:14px/20px SimSun;color:#555;border-right:1px solid #c6c6c6;}
+.search_con_nav_sub dt{font-weight:700;}
+.search_con_nav_sub dd{cursor:pointer;}
+.search_con_nav_sub dd.dd_hover{background-color:#c7c7c7;color:#fff;}
+
+
+/*index select */
+.search_menu{position:relative;float:left;width:364px;height:35px;border:1px solid #9a9a9a;}
+.search_value_box{width:100%;height:100%;overflow:hidden;}
+.search_value_box span{display:block;font:14px/29px SimSun;color:#555;box-sizing:border-box;-moz-box-sizing:border-box;}
+.search_value_box .sp_gain_value{padding:3px 15px;margin-right:35px;}
+.search_value_box .sp_mousedown{float:right;height:100%;width:35px;background:none 5px 13px no-repeat;cursor:pointer;}
+.search_con_nav{display:none;position:absolute;top:35px;left:-1px;width:200px;border:1px solid #9a9a9a;border-right:none;border-top:none;background-color:#FFF;z-index:9999;}
+.search_con_nav dt,.search_con_nav dd{padding:5px 15px;height:24px;font:14px/24px SimSun;color:#555;border-right:1px solid #9a9a9a;}
+.search_con_nav dt{font-weight:700;}
+.search_con_nav dd{cursor:pointer;}
+.search_con_nav dd.dd_hover{background-color:#c7c7c7;color:#fff;}
+
+
+/*column select */
+.search_menu_column{position:relative;float:left;margin-right:8px;width:155px;height:22px;background:url(../images/ipt_bj.jpg) 0 0 repeat-x;border:1px solid #ba0019;color:#555;}
+.search_value_box_column{width:100%;height:100%;font:12px/22px SimSun;overflow:hidden;}
+.search_value_box_column span{display:block;color:#555;}
+.search_value_box_column .sp_gain_value{padding:0 10px;margin-right:29px;text-align:right;}
+.search_value_box_column .sp_mousedown{float:right;height:100%;width:22px;background:url(../images/icon_arrow_gray_bottom.gif) 5px 10px no-repeat;cursor:pointer;}
+.search_con_nav_column{display:none;position:absolute;top:22px;left:-1px;width:120px;border:1px solid #ba0019;border-right:none;border-top:none;background-color:#FFF;z-index:9999;}
+.search_con_nav_column dt,.search_con_nav_column dd{padding:3px 10px;height:20px;font:12px/18px SimSun;color:#555;border-right:1px solid #ba0019;}
+.search_con_nav_column dt{font-weight:700;}
+.search_con_nav_column dd{cursor:pointer;}
+.search_con_nav_column dd.dd_hover{background-color:#c7c7c7;color:#fff;}

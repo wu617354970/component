@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>北京法院|视频应用平台</title>
+	<link rel="stylesheet" type="text/css" href="css/import.css" media="all" />
+</head>
+<body>
+	<input type="button" value="触发按钮"  class="js_btn_tigger"/>
+	<div class="fd_popup_layer"  style="display:none;">
+		<dl  class="fd_dl_popup">
+			<dt class="popup_hd">
+				<span class="sp_title">会议上传</span>
+				<a href="javascript:void(0);" class="popup_close">关闭</a>	
+			</dt>
+			<dd  class="popup_con popup_con_have_footer" >
+				<div class="fd_theme_contain fd_upload_contain">
+						<ul class="fd_ul_form  fd_mb10">
+							<li class="item">召开日期：2015年3月5日</li>
+							<li class="item item_have_input fd_posr_99">
+								<label for="" class="fd_label">段次信息</label>
+								<div class="search_menu_sub  js_search_menu_sub">
+									<div class="search_value_box_sub">
+										<span class="sp_mousedown" >下拉</span>
+										<span class="sp_gain_value" >全部</span>
+									</div>
+									<!-- search_value_box end -->
+									<dl class="search_con_nav_sub" >
+										<dt>全部</dt>
+										<dd class="dd_hover">全部1</dd>
+										<dd>全部2</dd>
+										<dd>全部3</dd>
+										<dd>全部4</dd>
+										<dd>全部5</dd>
+									</dl>
+								</div>
+								<!-- search_menu_sub end -->
+							</li>
+							<li class="item_have_input">
+								<label for="">开始时间</label>
+								<div class="fd_input_wrap fd_mr20">
+									<input type="text" name="" id="" />
+									<a href="javascript:void(0);"  class="btn_date">日期</a>
+								</div>
+								<label for="">结束时间</label>
+								<div class="fd_input_wrap">
+									<input type="text" name="" id="" />
+									<a href="javascript:void(0);"  class="btn_date">日期</a>
+								</div>
+							</li>
+							<li class="item_have_input">
+								<input type="button" value="选择文件"  class="fd_btn_medium fd_btn_medium_gray fd_mr10" />
+								<label for="">最多支持4个视角单个文件不能超过2个G</label>
+							</li>
+						</ul>
+						<table class="fd_table_upload_file">
+							<tr class="tr_strip">
+								<td>
+									<div class="fd_cell">
+										<div class="fd_eye">视角1</div>
+									</div>
+								</td>
+								<td class="fd_align_center">
+									<div class="fd_cell">
+										<span class="fd_wait">等待上传</span>
+									</div>
+								</td>
+								<td  class="fd_width_fix_30">
+									<div class="fd_cell">
+										<a href="javascript:void(0);" class="fd_btn_close">关闭</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="fd_width_25">
+									<div class="fd_cell">
+										<div  class="fd_eye ">视角1</div>
+									</div>
+								</td>
+								<td class="fd_align_center">
+									<div class="fd_cell ">
+										<span class="fd_wait">等待上传</span>
+									</div>
+								</td>
+								<td>
+									<div class="fd_cell">
+										<a href="javascript:void(0);"  class="fd_btn_close">等待上传</a>
+									</div>
+								</td>
+							</tr>
+							<tr class="tr_strip">
+								<td>
+									<div class="fd_cell">
+										<div class="fd_eye">视角1</div>
+									</div>
+								</td>
+								<td class="fd_align_center">
+									<div class="fd_cell">
+										<span class="fd_wait" >等待上传</span>
+									</div>
+								</td>
+								<td  class="fd_width_fix_30">
+									<div class="fd_cell">
+										<a href="javascript:void(0);" class="fd_btn_close">关闭</a>
+									</div>
+								</td>
+							</tr>
+								<tr>
+								<td >
+									<div class="fd_cell"> 
+										<div class="fd_eye">视角1</div>
+									</div>
+								</td>
+								<td class="fd_align_center">
+									<div class="fd_cell">
+										<span class="fd_wait" >等待上传</span>
+									</div>
+								</td>
+								<td>
+									<div class="fd_cell">
+										<a  href="javascript:void(0);"  class="fd_btn_close">等待上传</a>
+									</div>
+								</td>
+							</tr>
+							<tr class="tr_strip">
+								<td>
+									<div class="fd_cell">
+										<div class="fd_eye">视角1</div>
+									</div>
+								</td>
+								<td class="fd_align_center">
+									<div class="fd_cell">
+										<span class="fd_wait" >等待上传</span>
+									</div>
+								</td>
+								<td>
+									<div class="fd_cell">
+										<a href="javascript:void(0);" class="fd_btn_close">关闭</a>
+									</div>
+								</td>
+							</tr>
+						</table>
+				</div>
+				<!-- fd_upload_contain end -->
+			
+				<div class="fd_button_wrap">
+					<input type="button" value="保存"   class="fd_btn_medium fd_btn_medium_blue  js_save"  /><input type="button" value="取消"  class="fd_btn_medium fd_btn_medium_gray js_cancel"/>
+				</div>
+			</dd>
+			<!-- popup_con end -->
+		</dl>
+		<!-- fd_dl_popup end -->
+	</div>
+	<!-- fd_popup_layer  end -->
+
+
+	<script type="text/javascript" src="scripts/jQuery.v1.11.1.js"></script>
+	<script type="text/javascript" src="scripts/popup.js"></script>
+	<script type="text/javascript" src="scripts/addSelect.js"></script>
+	<script type="text/javascript">
+		//  下拉框	
+		$(".js_search_menu_sub").addSelect({
+			triggerElement : ".sp_mousedown", // className 或者id  或者元素选择器
+			mouseType:"click",				// 鼠标事件
+			extendTrigger : true, 			//  布尔值，默认为false,备选参数，true
+			searchContentContain : ".search_con_nav_sub", //  className 或者id  或者元素选择器
+			getValueClass : ".sp_gain_value" ,//  注意此参数带 "."或者"#"
+			addHoverClass : "dd_hover" ,//  注意此参数不带 "."且必须是class名	
+			callBack:function(value){
+				console.log(value);
+				//回调函数输出值
+			}
+		});
+		//  弹出层	
+		$(".js_btn_tigger").addPopup({
+				box : '.fd_popup_layer',
+				closeBtn : '.popup_close, .js_save ,.js_cancel',
+				mouseType : "click",
+				tweenTime : 300
+			});
+		//  删除上传文件	
+		$(".fd_table_upload_file  .fd_btn_close").click(function(){
+			$(this).parents("tr").remove();
+		});	
+	</script>
+</body>
+</html>

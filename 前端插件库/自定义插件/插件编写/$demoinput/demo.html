@@ -1,0 +1,168 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		.fd_select {
+				position:relative;
+				width:200px;
+				height:40px;
+				color:#333;
+				cursor:pointer;
+				font:14px/40px "Microsoft YaHei";
+				border:1px solid #ddd;
+			}
+		.fd_select.extend .fd_getvalue:after {
+				top:5px;
+				border-color:transparent;
+				border-bottom-color: #000;
+			}
+		.fd_getvalue {
+				position:relative;
+				width:100%;
+				height:100%;
+			}	
+		.fd_getvalue:after {
+				content:"";
+				position:absolute;
+				right:13px;
+				top:14px;
+				z-index:1;
+				border:10px solid transparent;
+				border-top-color: #000;
+			}		
+		.fd_drop_con {
+				position:absolute;
+				top:40px;
+				left:0;
+				z-index:99;
+				width:200px;
+				border:1px solid #000;
+			}	
+	</style>
+</head>
+<body>
+	<div class="fd_select">
+		<div class="fd_getvalue"></div>
+		<div class="fd_drop_con">
+			<label for=""><input type="checkbox" name=""  />文档1</label>
+			<label for=""><input type="checkbox" name=""   />文档2</label>
+			<label for=""><input type="checkbox" name=""   />文档3</label>
+			<label for=""><input type="checkbox" name=""   />文档3</label>
+			<label for=""><input type="checkbox" name=""   />文档3</label>
+			<label for=""><input type="checkbox" name=""   />文档3</label>
+			<label for=""><input type="checkbox" name=""   />文档3</label>
+			<label for=""><input type="checkbox" name=""   />文档3</label>
+			<label for=""><input type="checkbox" name=""   />文档3</label>
+			<label for=""><input type="checkbox" name=""   />文档3</label>
+			<label for=""><input type="checkbox" name=""   />文档3</label>
+			<label for=""><input type="checkbox" name=""   />文档3</label>
+			<label for=""><input type="checkbox" name=""   />文档3</label>
+		</div>
+		<!-- fd_drop_con end -->
+	</div>
+	<!-- fd_select end -->
+
+	<script type="text/javascript" src="jQuery.v1.11.1.min.js"></script>
+	 <script type = "text/javascript">
+		$(function () {
+			$.fn.addDrop = function (options) {
+				var opts = $.fn.extend({}, {
+						mousetype : "click", //  触发事件
+						getValue : ".fd_getvalue", //  获取值的框
+						dropcon : ".fd_drop_con", //  下拉框
+						addClassName : "extend", //  增加的类名
+						tweenTime : 300, //  缓动时间
+						isExtendZone : false, //  是否扩展
+						windowControl : "fd_drop_con", // 非此区域，隐藏
+						callback : null //  回调函数
+
+					}, options);
+				return this.each(function () {
+					var _that = $(this);
+
+					var _getValue = _that.find(opts.getValue);
+					var _con = _that.find(opts.dropcon);
+					var _flag = true;
+
+					//初始化函数
+					initial();
+					function initial() {
+						_con.hide();
+					}
+
+					// 获取值函数
+					_getValue.bind(opts.mousetype, function () {
+						if (_flag) {
+							slideDown();
+						} else {
+							slideUp();
+						}
+					});
+					//  展开函数
+					function slideDown() {
+						_that.addClass(opts.addClassName);
+						_con.slideDown(opts.tweenTime, function () {
+							_flag = false;
+							if (opts.callback != null && typeof opts.callback == "function") {
+								opts.callback();
+							}
+						});
+					}
+					// 收起函数
+					function slideUp() {
+						_con.slideUp(opts.tweenTime, function () {
+							_flag = true;
+							_that.removeClass(opts.addClassName);
+							if (opts.callback != null && typeof opts.callback == "function") {
+								opts.callback();
+							}
+						});
+					}
+					// 转换值
+					if (opts.isExtendZone) {
+						_con.find("label").bind("click", function () {
+							var _text = $(this).text();
+							$(this).find("input:checkbox").attr("checked", true);
+							_getValue.text(_text);
+							slideUp();
+						})
+					} else {
+						_con.find("input:checkbox").bind("click", function () {
+							var _text = $(this).parent().text();
+
+							_getValue.text(_text);
+							slideUp();
+						});
+					}
+
+					// 绑定文档事件
+					$(document).bind("click", function (event) {
+						// 获取当前的点击元素
+						var _target = $(event.target);
+						if (_target.hasClass(opts.dropcon.substring(1)) || _target.parents().hasClass(opts.dropcon.substring(1)) ||
+							_target.hasClass(opts.getValue.substring(1)) || _target.parents().hasClass(opts.getValue.substring(1))) {
+							return;
+						} else {
+							slideUp();
+						}
+					});
+
+				});
+			};
+			//  添加方法
+			$(".fd_select").addDrop({
+				mousetype : "click", //  触发事件
+				getValue : ".fd_getvalue", //  获取值的框
+				dropcon : ".fd_drop_con", //  下拉框
+				addClassName : "extend", //  增加的类名
+				tweenTime : 300, //  缓动时间
+				isExtendZone : false, //  是否扩展
+				windowControl : "fd_drop_con", // 非此区域，隐藏
+				callback : null //  回调函数
+			});
+		});
+	</script >
+</body>
+</html>

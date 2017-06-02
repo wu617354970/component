@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>焦点图banner</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css" media="all" />	
+	<script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="scripts/scrollarea.js"></script>	
+	<script type="text/javascript">
+	/*******************************************************************************************************************************************	
+		*方法名：						addScrollAble()		
+		*使用范例 ： 		 			$(".fd_focusimg_area").addScrollAble();		
+		*默认参数及说明：
+		box 							关联容器	
+		*index 							默认选中的初始为第一个
+		*dir 							方向 h水平 或者 v垂直	(默认垂直布局 v)
+		*step 							1表示一个个滚动   其他数字多个一起滚动	(默认一个个滚动)	
+		*handlePrevious					控制向前翻页的把锁	
+		*handleNext						控制向后翻页的把锁		
+		*clientStep						可视区域能容纳的条目数，必须为大于1的整数
+		*tweenTime:500					缓动时间
+		*mosueType 						列表项事件触发类型(默认点击 click)
+		*selectedClass 					选中的类名
+		*autoPlay 						boolean值默认为false
+		*delay 							延迟时间							
+		*reverse						滚动的方向boolean值默认为false
+		*callback 						回调函数
+	******************************************************************************************************************************************/
+/*----------------------- 连续滚动，朝左滚动  -----------------------*/		
+	$(function () {
+		$(".fd_focusimg_area").addScrollAble({
+			index : 0,
+			dir : 'h',
+			step : 4,
+			selectedClass : "on",
+			clientStep : 4,
+			handlePrevious : ".a_btn_pre",
+			handleNext : ".a_btn_next",
+			callback : function () {},
+			tweenTime : 500,
+			autoPlay : false,
+			reverse : false
+		});
+		$(".fd_focusimg_area ul>li").click(function () {
+			var url = $(this).find("img").attr("src");
+			$(".fd_focusimg li img").attr({
+				"src" : url
+			});
+		}).filter(":first").trigger("click");
+
+
+		var  clientStep=4;
+		
+		$(".fd_focusimg .d_btn >.sp_pre").click(function () {
+			var _targetHandle = $(".fd_focusimg_area ul>li.on").index();
+			if((_targetHandle)%clientStep ==0){
+				$(".fd_focusimg_area .a_btn_pre").trigger("click");
+			}
+			$(".fd_focusimg_area ul>li.on").prev().trigger("click");
+		});
+		$(".fd_focusimg .d_btn >.sp_next").click(function () {
+			var _targetHandle = $(".fd_focusimg_area ul>li.on").index();
+			if((_targetHandle+1)%clientStep ==0){
+				if(_targetHandle!=0){
+					$(".fd_focusimg_area .a_btn_next").trigger("click")
+				}
+			}
+			$(".fd_focusimg_area ul>li.on").next().trigger("click");
+		});
+		$(".fd_focusimg").hover(function () {
+			$(".fd_focusimg").find(".d_btn").stop(true, true).animate({
+				opacity : 1
+			}, 400)
+		}, function () {
+			$(".fd_focusimg").find(".d_btn").stop(true, true).animate({
+				opacity : 0
+			}, 400)
+		}).trigger("mouseout");
+	});
+</script>
+</head>
+<body>			
+<div class="fd_focusimg_wrap">
+	<div class="fd_focusimg"  id="js_banner_left_order">
+		<ul class="con">
+			<li><a href="javascript:void(0);"><img src="images/banner_05.jpg" alt="banner_06"/></a>
+				<p class="p_title">我是标题，我的文字不能太长了1</p>
+				<div class="focusimg_filter"></div>
+			</li>
+		</ul>
+		<div class="d_btn">
+			<span class="sp_pre ">前一张</span>
+			<span class="sp_next">后一张 </span>	
+		</div>
+	</div>
+	<!-- fd_focusimg end -->
+	<div class="fd_focusimg_area">
+		<a  href="javascript:void(0);"  class="a_btn_pre " ></a>
+		<div class="scroll_pic_wrap">
+			<div class="scroll_pic">
+				<ul>
+					<li class="on">
+						<a href="javascript:void(0);"><img src="images/banner_01.jpg" alt="banner_01" /></a>
+						<span class="sp_text"><a href="javascript:void(0);">我是图片标题</a></span>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="images/banner_02.jpg" alt="banner_02" /></a>
+						<span class="sp_text"><a href="javascript:void(0);">我是图片标题</a></span>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="images/banner_03.jpg" alt="banner_03" /></a>
+						<span class="sp_text"><a href="javascript:void(0);">我是图片标题</a></span>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="images/banner_04.jpg" alt="banner_04" /></a>
+						<span class="sp_text"><a href="javascript:void(0);">我是图片标题</a></span>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="images/banner_05.jpg" alt="banner_05" /></a>
+						<span class="sp_text"><a href="javascript:void(0);">我是图片标题</a></span>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="images/banner_06.jpg" alt="banner_06" /></a>
+						<span class="sp_text"><a href="javascript:void(0);">我是图片标题</a></span>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="images/banner_01.jpg" alt="banner_01" /></a>
+						<span class="sp_text"><a href="javascript:void(0);">我是图片标题</a></span>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="images/banner_02.jpg" alt="banner_02" /></a>
+						<span class="sp_text"><a href="javascript:void(0);">我是图片标题</a></span>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="images/banner_03.jpg" alt="banner_03" /></a>
+						<span class="sp_text"><a href="javascript:void(0);">我是图片标题</a></span>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="images/banner_04.jpg" alt="banner_04" /></a>
+						<span class="sp_text"><a href="javascript:void(0);">我是图片标题</a></span>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="images/banner_05.jpg" alt="banner_05" /></a>
+						<span class="sp_text"><a href="javascript:void(0);">我是图片标题</a></span>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="images/banner_06.jpg" alt="banner_06" /></a>
+						<span class="sp_text"><a href="javascript:void(0);">我是图片标题</a></span>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="images/banner_01.jpg" alt="banner_01" /></a>
+						<span class="sp_text"><a href="javascript:void(0);">我是图片标题</a></span>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="images/banner_02.jpg" alt="banner_02" /></a>
+						<span class="sp_text"><a href="javascript:void(0);">我是图片标题</a></span>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="images/banner_03.jpg" alt="banner_03" /></a>
+						<span class="sp_text"><a href="javascript:void(0);">我是图片标题</a></span>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="images/banner_04.jpg" alt="banner_04" /></a>
+						<span class="sp_text"><a href="javascript:void(0);">我是图片标题</a></span>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="images/banner_05.jpg" alt="banner_05" /></a>
+						<span class="sp_text"><a href="javascript:void(0);">我是图片标题</a></span>
+					</li>
+					<li>
+						<a href="javascript:void(0);"><img src="images/banner_06.jpg" alt="banner_06" /></a>
+						<span class="sp_text"><a href="javascript:void(0);">我是图片标题</a></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<a  href="javascript:void(0);"  class="a_btn_next " ></a>
+	</div>
+	<!-- fd_focusimg_area end -->							
+</div>
+<!-- fd_focusimg_wrap end -->				
+
+</body>
+</html>

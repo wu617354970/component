@@ -1,0 +1,48 @@
+/*css document*/
+
+/***************************************************************************************************	
+
+							     	type:	popup  tips
+									
+***************************************************************************************************/		
+.fd_popup_tips {
+	display:none;
+	position:absolute;
+	top:20px;
+	left:50%;
+	border-bottom:1px solid #ddd;
+	padding:10px 50px;
+	color:#333;
+	font:18px/40px "微軟正黑體";
+	z-index:99999;
+	border-radius:5px;
+	background-color:#fff;
+	box-shadow:0 0 5px #333;
+}	
+.fd_popup_tips:before {
+	position:absolute;
+	top:-11px;
+	left:50%;
+	z-index:9999;
+	content:"";
+	width:20px;
+	height:13px;
+	overflow:hidden;
+	margin-left:-9px;
+	background: url(../images/popup_arrow.png) center  0 no-repeat;
+}	
+.fd_popup_tips_top:before{
+	display:none;
+}
+.fd_popup_tips_top:after {
+	position:absolute;
+	bottom:-12px;
+	left:50%;
+	z-index:9999;
+	content:"";
+	width:20px;
+	height:13px;
+	overflow:hidden;
+	margin-left:-9px;
+	background: url(../images/popup_arrow.png) center -47px no-repeat;
+}

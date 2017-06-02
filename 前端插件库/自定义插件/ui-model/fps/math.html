@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		 *{
+			margin:0;
+			padding:0;
+			box-sizing:border-box;
+		 }
+		 html,body {
+			height:100%;
+		 }
+		 canvas {
+			display:block;	
+		 }
+	</style>
+</head>
+<body>
+<canvas id="jsCanvas"></canvas>
+<script type="text/javascript" src="js/fps.js"></script>
+<script type="text/javascript">
+var  fps=new FPS();
+				
+window.onload = function () {
+	//cache Math objects 
+	var   cos = Math.cos, // con
+		  sin = Math.sin, // sin 
+		  canMove = false, // mousemove have  effect  
+		 
+		  win = window,//  window
+		  doc = document, //  document
+		  MyCanvasContain = doc.getElementById("jsCanvas"), // canvas  contain
+		  width = MyCanvasContain.width = win.innerWidth,  //  define  canvas  width
+		  height = MyCanvasContain.height = win.innerHeight,  //  define  canvas  height
+		  hue = 0, // hue =>色相
+		  MyCanvas = MyCanvasContain.getContext("2d");  //  define  my  canvas 
+		 
+		
+		
+		MyCanvas.fillRect(0, 0, width, height); // resize <canvas> and draw black rect (default)
+		MyCanvas.globalCompositeOperation = "lighter"; // switch to additive color application
+		MyCanvas.lineWidth = 0.2;
+		MyCanvas.lineCap = "round";
+	
+	
+	
+	//  set  canvas  params
+	function  setCanvasSize(){
+		  width = MyCanvasContain.width = win.innerWidth; //  define  canvas  width
+		  height = MyCanvasContain.height = win.innerHeight;  //  define  canvas  height
+		//  MyCanvas.globalCompositeOperation = "lighter"; // switch to additive color application
+		  MyCanvas.fillRect(0, 0, width, height); // resize <canvas> and draw black rect (default)
+
+	}
+	//  bind  resize  event 
+	window.onresize=function(){
+		setCanvasSize();
+	}
+	
+	//   draw  mask 
+	function  drawMask(e){
+		if(e!=1) {
+			MyCanvas.save();
+				MyCanvas.globalCompositeOperation = "source-over"; // switch to additive color application
+				MyCanvas.fillStyle = "rgba(0,0,0,0.02)";
+				MyCanvas.fillRect(0, 0, width, height); // resize <canvas> and draw black rect (default)
+			MyCanvas.restore();
+		}
+	}
+			
+	var flag = 0,  //  旗帜
+		distance = 1, // 距离
+		timer = null, // 距离
+		lineCount = 20, // 线的数量
+		PI360 = 360 * Math.PI / 180; //  360 deg 弧度数
+		theta = 0; //  Theta（θ）是用来测量时间变化对期权理论价值的影响。表示时间每经过一天，期权价值会损失多少。
+	
+		var  i=0;
+	MyCanvasContain.onmousedown=function(event){
+	
+		MyCanvas.clearRect(0, 0, width, height); // resize <canvas> and draw black rect (default)
+		var a=0;
+		var b=0;
+		var distance=200;
+		var  A=a=event.pageX;
+		var  B=b=event.pageY;
+		var  distance=0;
+		var  theta=0;
+		var	R=(A/width * 999>>0)/999;
+		var	r=(B/height * 999>>0)/999;
+		
+		MyCanvas.lineWidth=2;
+		MyCanvas.strokeStyle='white';
+		MyCanvas.fillStyle='black';
+		MyCanvas.fillRect(0, 0, width, height); // resize <canvas> and draw black rect (default)
+		var  i=0;
+		fps.go(function(){
+			MyCanvas.beginPath();
+			i++;
+				MyCanvas.clearRect(0, 0, width, height); 
+				MyCanvas.fillRect(0, 0, width, height); // resize <canvas> and draw black rect (default)
+		//	drawMask();
+
+			
+			if(distance>height){
+				flag=true;
+
+			}
+			if(distance < 0.1) { // has hit minimum
+				flag = false;
+			}
+			
+			if(flag){
+				distance-=0.1;
+				theta-=PI360;
+			}else {
+				distance+=0.1;
+				theta+=PI360;
+			}
+			q = (R / r - 1) * theta;	
+
+		var 	x =  distance * cos(q) + A ; // center on xy coords
+		var  	y = distance * sin(q)+B;
+				MyCanvas.strokeStyle = "hsla(" + (i % 360) + ",100%,50%,0.75)";
+				MyCanvas.moveTo(a, b);
+				MyCanvas.lineTo(x, y);
+				a=x;
+				b=y;
+				MyCanvas.stroke();
+				MyCanvas.closePath();
+		
+		});	
+		
+		// // draw rainbow hypotrochoid
+		// draw rainbow hypotrochoid
+	
+		
+	}		
+	MyCanvasContain.onmouseup=function(){
+		canMove=false;
+	}	
+		
+
+	
+
+	
+
+}
+</script>
+</body>
+</html>

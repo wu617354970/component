@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+}
+.fd-operate {
+    margin: 5px;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+.fd-operate em {
+    color: #ff6600;
+}
+.fd-operate .fd-item {
+    overflow: hidden;
+    zoom:1;
+    line-height: 30px;
+    vertical-align: middle;
+}
+.fd-operate .fd-item:after {
+    content:"";
+    display: block;
+    clear: both;
+}
+.fd-operate .fd-item>span,
+.fd-operate .fd-item>select,
+.fd-operate .fd-item>input,
+.fd-operate .fd-item>label {
+    float: left;
+}
+.fd-operate .fd-item>input ,
+.fd-operate .fd-item>select {
+    margin-right: 10px;
+    margin-top: 3px;
+    height: 24px;
+    min-width: 140px;
+}
+.fd-operate .fd-item  option {
+    line-height: 24px;
+    height: 24px;
+}
+.fd-operate .fd-item >.fd-label {
+    margin-left: 5px;
+    min-width: 100px;
+    text-align: right;
+}
+.fd-operate .fd-item .fd-operate-btn {
+    margin-left: 5px;
+    cursor: pointer;
+    padding: 0 10px;
+    border: 1px solid #dddddd;
+    border-radius: 3px  ;
+    display: none;
+}
+/**显示删除按钮*/
+.fd-operate .fd-item .fd-operate-btn.delete {
+    display: block;
+}
+/**显示添加按钮*/
+.fd-operate .fd-item.default .fd-operate-btn.add {
+    display: block;
+}
+.fd-operate .fd-item.default .fd-operate-btn.delete {
+    display: none;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Accrodion</title>
+
+	<style type="text/css">
+	
+			body{ font-size:12px;}
+			body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { margin:0; padding:0;}
+						
+			.box{ width:440px; height:354px; overflow:hidden;border:1px solid #333;}
+			.box ul { position:relative;}
+			.box ul li{ width:440px;  list-style:none;}
+			.box ul li div h3{ width:440px; background-color:#999; line-height:20px; text-align:center; cursor:pointer; display:block;}
+			.box ul li div h3.on{ background-color:#333; line-height:20px; text-align:center; cursor:pointer; display:block;}
+			.box ul li div div{ display:none;}
+  </style>
+  
+</head>
+
+<body>
+
+	<div id="box" class="box">
+  		<ul>
+      		<li>
+          		<div>
+              		<h3>标题1</h3>
+                  <div><img src="images/img1.jpg" /></div>
+              </div>
+          </li>
+          <li>
+          		<div>
+              		<h3>标题2</h3>
+                  <div><img src="images/img2.jpg" /></div>
+              </div>
+          </li>
+          <li>
+          		<div>
+              		<h3>标题3</h3>
+                  <div><img src="images/img3.jpg" /></div>
+              </div>
+          </li>
+      </ul>
+  </div>
+  
+	<script type="text/javascript" src="js/jquery1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/accordion.z.js"></script>
+  <script type="text/javascript">
+  		
+			$("#box").addAccordion({autoPlay:true});
+			
+  </script>
+</body>
+</html>

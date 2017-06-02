@@ -1,0 +1,122 @@
+@charset "utf-8";
+/*css document*/
+
+/************************************
+ *	Version 		14.0.1
+ *	Author			wuwg
+ *  CreateTime      14.07.14
+ *	UpdateTime		14.07.14
+ **************************************/
+ 
+ .contain {
+		min-width:1002px;
+		width:100%;
+		height:100%;
+		background-color:#fff;
+	}
+.main {
+		margin:0 auto;
+		padding:20px 0;
+		width:1002px;	
+	}	
+.h2_18_m {
+		padding:15px 0px;
+		color:#333;
+		text-align:center;
+		font:700 18px/30px "Microsoft YaHei";
+	}
+.h3_16_m {
+		padding-bottom:10px;
+		color:#333;
+		text-align:center;
+		font:700 16px/30px "Microsoft YaHei";
+	}	
+.p_info {
+		color:#999;
+		text-align:center;
+		font:12px/26px SimSun;
+	}	
+.table_contain {
+		width:100%;
+	}	
+.table_contain td {
+		vertical-align:top;
+		padding:20px;
+	}	
+/*--------------------------- scrollbar ---------------------------*/
+#scrollContent,#scrollContent2,.scrollContent {
+		margin:0 auto;
+		width:140px;
+		height:170px;
+		overflow:hidden;
+		border:1px solid #ddd;
+	}
+.scrollContent_con {
+		padding:10px;
+	}	
+#scrollContent2 {
+		height:240px;
+	}	
+p {	
+		color:#666;
+		font:14px/40px "Microsoft YaHei";
+	}
+.arrow_up {
+		background: url(../images/scroll_arrow_up.gif) 0 0 no-repeat;
+	}	
+.arrow_down {
+		background: url(../images/scroll_arrow_down.gif) 0 0 no-repeat;
+	}	
+
+.scroll_bar {
+		background: url(../images/scroll_bar.gif) 0 0 repeat;
+	}
+/*--------------- scrollContentHorizontal -------------*/
+#scrollContentHorizontal {
+		margin:40px auto;
+		width:540px;
+		height:100px;
+		overflow:hidden;
+		border:1px solid #ddd;	
+	}	
+.ul_horizontal ,
+.ul_horizontal li{
+		list-style:none;
+	}	
+.ul_horizontal {
+		width:1000px;
+		height:100px;
+	}
+.ul_horizontal  li {
+		float:left;
+		text-align:center;
+		width:100px;
+		height:100px;
+		color:#333;
+		font:30px/100px "Microsoft YaHei";
+	}	
+#scrollContentHorizontal .arrow_up {
+		background: url(../images/scroll_arrow_left.gif) 0 0 no-repeat;
+	}	
+#scrollContentHorizontal .arrow_down {
+		background: url(../images/scroll_arrow_right.gif) 0 0 no-repeat;
+	}	
+#scrollContentHorizontal .scroll_bar {
+		background: url(../images/scroll_bar_horizontal.gif) 0 0 repeat;
+	}
+body {
+	height:100%;
+}	
+.scrollContentFix {
+	position:fixed;
+	top:0;
+	left:0;
+	width:30%;
+	height:50%;
+	z-index:0;
+	border:1px solid #000;
+}
+#scrollContentFix {
+	width:100%;
+	height:100%;
+}	

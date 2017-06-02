@@ -1,0 +1,148 @@
+{
+    "success": true,
+    "message": "成功",
+    "result": {
+        "mc": "北京",
+     	 "mapDataList": [
+            {
+                "mapId": "110217",
+                "name": "西城区",
+                "shouli": 1048,
+                "banjie": 2084,
+                "banjieList":[],
+                "shouliList":[]
+                
+            },
+            {
+                "mapId": "110201",
+                "name": "东城区",
+                "shouli": 446,
+                "banjie": 649,
+                 "banjieList":[],
+                "shouliList":[]
+            },
+            {
+                "mapId": "110219",
+                "name": "大兴区",
+                "shouli": 980,
+                "banjie": 770,
+                 "banjieList":[],
+                "shouliList":[]
+            },
+            {
+                "mapId": "110204",
+                "name": "丰台区",
+                "shouli": 764,
+                "banjie": 380,
+                 "banjieList":[],
+                "shouliList":[]
+            },
+            {
+                "mapId": "110218",
+                "name": "房山区",
+                "shouli": 718,
+                "banjie": 4038,
+                 "banjieList":[],
+                "shouliList":[]
+            },
+            {
+                "mapId": "110104",
+                "name": "海淀区",
+                 "shouli": 609,
+                "banjie": 438,
+                 "banjieList":[],
+                "shouliList":[]
+            },
+            {
+                "mapId": "110105",
+                "name": "门头沟区",
+                 "shouli": 341,
+                "banjie": 438,
+                 "banjieList":[],
+                "shouliList":[]
+            }
+            ,
+            {
+                "mapId": "110107",
+                "name": "昌平区",
+                 "shouli": 351,
+                "banjie": 438,
+                 "banjieList":[],
+                "shouliList":[]
+            }
+            ,
+            {
+                "mapId": "110109",
+                "name": "延庆县",
+                 "shouli": 910,
+                "banjie": 438,
+                 "banjieList":[],
+                "shouliList":[]
+            }
+            ,
+            {
+                "mapId": "110103",
+                "name": "石景山",
+                 "shouli": 641,
+                "banjie": 638,
+                 "banjieList":[],
+                "shouliList":[]
+            }
+            ,
+            {
+                "mapId": "110401",
+                "name": "朝阳区",
+                 "shouli": 91,
+                "banjie": 638,
+                 "banjieList":[],
+                "shouliList":[]
+            }
+            ,
+            {
+                "mapId": "110403",
+                "name": "通州区",
+                "shouli": 51,
+                "banjie": 138,
+                 "banjieList":[],
+                "shouliList":[]
+            }
+            ,
+            {
+                "mapId": "110404",
+                "name": "平谷区",
+                 "shouli": 31,
+                "banjie": 238,
+                 "banjieList":[],
+                "shouliList":[]
+            }
+            ,
+            {
+                "mapId": "110406",
+                "name": "密云县",
+                 "shouli": 111,
+                "banjie": 538,
+                 "banjieList":[],
+                "shouliList":[]
+            }
+            ,
+            {
+                "mapId": "110402",
+                "name": "顺义区",
+                 "shouli": 701,
+                "banjie": 338,
+                 "banjieList":[],
+                "shouliList":[]
+            }
+            ,
+            {
+                "mapId": "110405",
+                "name": "怀柔区",
+                 "shouli": 21,
+                "banjie": 238,
+                 "banjieList":[],
+                "shouliList":[]
+            }
+            
+        ]
+    }
+}

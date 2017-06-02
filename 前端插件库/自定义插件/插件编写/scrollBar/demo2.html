@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/scrollbar.css" />
+		<link rel="stylesheet" href="css/demo.css" />
+		<style type="text/css">
+		* {
+		
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		.fd-scroll-contain-wrap {
+		    margin-right: 20px;
+			position: relative;
+			margin: 10px;
+			width: 400px;
+			height: 300px;
+			border: 1px solid #ddd;
+			overflow: hidden;
+		}
+		.fd-scroll-contain-wrap  .fd-scroll-contain {
+			margin:0;
+			border:none;
+		}
+		.fd-scroll-contain {
+			z-index:1;
+		}
+		.fd-scroll-contain-wrap .fd-mask {
+			position:absolute;
+			z-index:9;
+			width:100%;
+			height:100%;
+			background-color:rgba(0,0,0,0.0.1);
+			/*这个是为了让大家看到实现方式，实际上透明度应该是0*/
+		}
+		.fd-hide {
+			display:none;
+		}
+		.fd-scroll-content li{
+			height:300px;
+			line-height:300px;
+		}
+		</style>
+		
+</head>
+<body>
+	<h2>addScrollBar()方法</h2>
+	<p>时间:2016/10/26，作者:wuwg</p>
+	<p>配个 mousewheel 事件调用update方法，全屏滚动</p>
+	<div class="fd-scroll-contain-wrap"   id="js-scroll-contain-wrap">
+		<div class="fd-scroll-contain"  id="demo1" >
+			<ul class="fd-scroll-content" >
+				<li>demo会进行两次更新，可以参考这个demo1</li>
+				<li>demo中还设置了回调函数2</li>
+				<li>测试3</li>
+				<li>测试4</li>
+				<li>测试5</li>
+				<li>测试6</li>
+				<li>测试7</li>
+				<li>测试8</li>
+				<li>测试9</li>
+				<li>测试10</li>
+				<li>测试11</li>
+				<li>测试12</li>
+				<li>测试13</li>
+				<li>测试14</li>
+				<li>测试15</li>
+				<li>测试16</li>
+				<li>测试17</li>
+			 </ul>
+		</div>
+		<div  class="fd-mask fd-hide"></div>
+	</div>
+    
+	<script src="js/jQuery.v1.11.1.min.js"></script>
+    <script src="js/scrollbar.min.js"></script>
+    <script type="text/javascript">
+			// demo1
+		var scrollBar1 = $('#demo1').addScrollBar({
+				// 滚动条参数
+				hasScrollBar : true, // 是否有滚动条
+				direction : 'vertical', //  垂直滚动还是水平滚动条，可选参数 horizontal（水平滚动条）
+				scrollContentContainClass : 'fd-scroll-content', // 内容容器的class
+				scrollBarContainClass : 'fd-scroll-track', // 滚动条容器
+				scrollBarClass : 'fd-scroll-bar', // 滚动条
+				pressClass : 'pressed', // 滚动条按下类名
+				scrollBarMinHeight : 5, //  滚动条最小高度
+				scrollBarMinWidth : 50, //  滚动条最小宽度
+				scrollStep : 0, // 一次滚动的距离
+				scrollTweenTime : 10, // 滚动耗时
+				hideScrollBar : true, //Boolearn值,默认为false,是否绑定鼠标移入和移除事件
+				callback : function () {
+					console.log('滚动后的回调函数')	
+				}
+			});
+			
+			//  注意  top 是负值 !important
+			$('#demo1').on('mousewheel',function(event){
+				$('#js-scroll-contain-wrap').find('.fd-mask').removeClass('fd-hide');
+			  // 判断鼠标向下还是向上滚动
+				var _mousewheelDir = event.deltaY,_moveDistance = 0;
+				switch (_mousewheelDir) {
+					//  向上滚动 
+				case 1:
+				var  _top=parseInt( scrollBar1.scrollBar.contentContain.css('top') );
+					 _top=_top?_top:0;
+				var  _scrollDistance= Math.min( _top + scrollBar1.scrollBar.offsetHeight,0);
+					scrollBar1.scrollBar.update(1000,_scrollDistance,function(){
+						$('#js-scroll-contain-wrap').find('.fd-mask').addClass('fd-hide');
+					});
+					break;
+					//  向下滚动 
+				case -1:
+				var  _top=parseInt ( scrollBar1.scrollBar.contentContain.css('top'));
+					 _top=_top?_top:0;
+				var  maxHeight=-(scrollBar1.scrollBar.scrollHeight-scrollBar1.scrollBar.offsetHeight);
+				var  _scrollDistance= Math.max( _top-scrollBar1.scrollBar.offsetHeight,maxHeight);
+							
+					scrollBar1.scrollBar.update(1000,_scrollDistance,function(){
+						$('#js-scroll-contain-wrap').find('.fd-mask').addClass('fd-hide');
+					});
+					break;
+				default:
+					break;
+				}
+			});
+   
+   </script>
+</body>
+</html>
